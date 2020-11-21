@@ -37,7 +37,7 @@ namespace El_Unico_Grupo3
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             frmRegistroClientes cliente = new frmRegistroClientes();
-
+            RegistroCliente admin = new RegistroCliente();
             if (EstaValidado())
             {
                 string consulta = "SELECT * FROM tab_usuario WHERE Nombre_Usuario='" + txtUsuario.Text + "' AND Contrasena_Usuario='" + txtContraseña.Text + "'";
@@ -45,7 +45,7 @@ namespace El_Unico_Grupo3
                 {
                     this.Hide();
                     MessageBox.Show("Bienvenido");
-                    
+                  //  admin.Show();
                     cliente.Show();
 
                 }

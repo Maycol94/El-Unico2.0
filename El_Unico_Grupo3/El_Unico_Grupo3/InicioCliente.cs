@@ -70,5 +70,17 @@ namespace El_Unico_Grupo3
         {
             AbrirFormEnPanel(new FrmInicio());
         }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            RegistroCliente cliente = new RegistroCliente();
+            
+            AbrirFormEnPanel(new RegistroCliente());
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
