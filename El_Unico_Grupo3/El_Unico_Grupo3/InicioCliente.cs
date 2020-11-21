@@ -51,7 +51,7 @@ namespace El_Unico_Grupo3
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new FrmUsuarios());
+            
         }
         private void AbrirFormEnPanel(object formhija)
         {
@@ -69,6 +69,18 @@ namespace El_Unico_Grupo3
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             AbrirFormEnPanel(new FrmInicio());
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            RegistroCliente cliente = new RegistroCliente();
+            
+            AbrirFormEnPanel(new RegistroCliente());
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

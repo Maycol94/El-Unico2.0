@@ -36,14 +36,14 @@ namespace El_Unico_Grupo3
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            frmRegistroClientes cliente = new frmRegistroClientes();
-
+            InicioAdmin Admin = new InicioAdmin();
+            frmRegistroClientes Empleado = new frmRegistroClientes();
             if (EstaValidado())
             {
                 string consulta = "SELECT * FROM tab_usuario WHERE Nombre_Usuario='" + txtUsuario.Text + "' AND Contrasena_Usuario='" + txtContraseña.Text + "'";
                 if (conexionDB.Login(consulta))
                 {
-                    MessageBox.Show("Bienvenido");
+                    MessageBox.Show("Bienvenido");  
 
                     string TipoUsuario;
                     TipoUsuario = "SELECT Tipo_Usuario FROM tab_usuario WHERE Nombre_Usuario='" + txtUsuario.Text + "' AND Contrasena_Usuario='" + txtContraseña.Text + "'";
@@ -52,12 +52,13 @@ namespace El_Unico_Grupo3
                     {
                         this.Hide();
                         MessageBox.Show("Bienvenido");
-                        cliente.Show();
+                        Admin.Show();
                     }
 
                     else
                     {
-                        MessageBox.Show("Lo sentimos no eres administrador");
+                        this.Hide();
+                        Empleado.Show();
                     }
                 }
                 else
