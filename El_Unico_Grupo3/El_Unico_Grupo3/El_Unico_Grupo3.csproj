@@ -104,6 +104,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroCliente.Designer.cs">
+      <DependentUpon>RegistroCliente.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +136,9 @@
     </Compile>
     <EmbeddedResource Include="InicioCliente.resx">
       <DependentUpon>InicioCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroCliente.resx">
+      <DependentUpon>RegistroCliente.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
