@@ -123,6 +123,12 @@
     <Compile Include="InicioAdmin.Designer.cs">
       <DependentUpon>InicioAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistroFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroFactura.Designer.cs">
+      <DependentUpon>RegistroFactura.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
