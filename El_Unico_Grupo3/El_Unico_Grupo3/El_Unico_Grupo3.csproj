@@ -166,6 +166,9 @@
     <EmbeddedResource Include="InicioAdmin.resx">
       <DependentUpon>InicioAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RegistroFactura.resx">
+      <DependentUpon>RegistroFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
