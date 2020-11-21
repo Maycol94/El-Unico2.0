@@ -37,7 +37,11 @@ namespace El_Unico_Grupo3
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.errorIConRegistroUser = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbxTipoUsuario = new System.Windows.Forms.ComboBox();
+            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.errorIConRegistroUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -66,10 +70,10 @@ namespace El_Unico_Grupo3
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.txtUsuario.Location = new System.Drawing.Point(116, 80);
+            this.txtUsuario.Location = new System.Drawing.Point(161, 80);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(328, 27);
-            this.txtUsuario.TabIndex = 2;
+            this.txtUsuario.TabIndex = 1;
             // 
             // label3
             // 
@@ -86,7 +90,7 @@ namespace El_Unico_Grupo3
             // 
             this.txtContraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.ForeColor = System.Drawing.Color.DimGray;
-            this.txtContraseña.Location = new System.Drawing.Point(116, 127);
+            this.txtContraseña.Location = new System.Drawing.Point(161, 127);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(328, 27);
             this.txtContraseña.TabIndex = 2;
@@ -97,10 +101,10 @@ namespace El_Unico_Grupo3
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(12, 170);
+            this.btnRegistrar.Location = new System.Drawing.Point(16, 234);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(175, 40);
-            this.btnRegistrar.TabIndex = 3;
+            this.btnRegistrar.TabIndex = 4;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
@@ -109,14 +113,48 @@ namespace El_Unico_Grupo3
             // 
             this.errorIConRegistroUser.ContainerControl = this;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(12, 176);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(126, 19);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Tipo de Usuario";
+            // 
+            // cbxTipoUsuario
+            // 
+            this.cbxTipoUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxTipoUsuario.FormattingEnabled = true;
+            this.cbxTipoUsuario.Items.AddRange(new object[] {
+            "Administrador",
+            "Empleado"});
+            this.cbxTipoUsuario.Location = new System.Drawing.Point(161, 178);
+            this.cbxTipoUsuario.Name = "cbxTipoUsuario";
+            this.cbxTipoUsuario.Size = new System.Drawing.Size(328, 29);
+            this.cbxTipoUsuario.TabIndex = 3;
+            // 
+            // dgvUsuarios
+            // 
+            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsuarios.Location = new System.Drawing.Point(16, 298);
+            this.dgvUsuarios.Name = "dgvUsuarios";
+            this.dgvUsuarios.Size = new System.Drawing.Size(479, 150);
+            this.dgvUsuarios.TabIndex = 5;
+            // 
             // FrmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(507, 336);
+            this.ClientSize = new System.Drawing.Size(507, 593);
+            this.Controls.Add(this.dgvUsuarios);
+            this.Controls.Add(this.cbxTipoUsuario);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label2);
@@ -124,7 +162,9 @@ namespace El_Unico_Grupo3
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmUsuarios";
             this.Text = "Usiaros";
+            this.Load += new System.EventHandler(this.FrmUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorIConRegistroUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,5 +179,8 @@ namespace El_Unico_Grupo3
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.ErrorProvider errorIConRegistroUser;
+        private System.Windows.Forms.ComboBox cbxTipoUsuario;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView dgvUsuarios;
     }
 }

@@ -28,7 +28,7 @@ namespace El_Unico_Grupo3
             Contraseña = txtContraseña.Text;
             if(EstaValidado())
             {
-                Consulta = "INSERT INTO tab_usuario (Nombre_Usuario, Contrasena_Usuario) VALUES ('"+usuario +"', '"+ Contraseña + "');";
+                Consulta = "INSERT INTO tab_usuario (Nombre_Usuario, Contrasena_Usuario, Tipo_Usuario) VALUES ('"+usuario +"', '"+ Contraseña + "', '" + cbxTipoUsuario.SelectedItem + "'); ";
                 if (conexionDB.Insertar(Consulta))
                 {
                     MessageBox.Show("Registro guardato con exito","Información", MessageBoxButtons.OK,MessageBoxIcon.Information);
@@ -59,6 +59,15 @@ namespace El_Unico_Grupo3
 
 
             return NoError;
+        }
+
+        private void FrmUsuarios_Load(object sender, EventArgs e)
+        {
+            if(cbxTipoUsuario.SelectedItem == null)
+            {
+                cbxTipoUsuario.SelectedItem = 0;
+            }
+            dgvUsuarios.DataSource = conexionDB.LlenarGrid("SELECT * FROM tab_usuario");
         }
     }
 }

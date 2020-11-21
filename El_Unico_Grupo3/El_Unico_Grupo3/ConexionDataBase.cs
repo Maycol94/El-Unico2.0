@@ -48,10 +48,11 @@ namespace El_Unico_Grupo3
             {
                 while (verificar.Read())
                 {
-                    string[] row = { verificar.GetString(0), verificar.GetString(1), verificar.GetString(2) };
+                    string[] row = { verificar.GetString(0), verificar.GetString(1), verificar.GetString(2), verificar.GetString(3) };
                 }
                 encontrado = true;
-               
+                conexion.Close();
+
             }
             else
             {
@@ -134,5 +135,32 @@ namespace El_Unico_Grupo3
             return dt;
         }
 
+        //public DataTable TipoUsuario(string consulta)
+        //{
+        //    conexion.Open();
+        //    cmd = new MySqlCommand(consulta, conexion);
+        //    da = new MySqlDataAdapter(cmd);
+
+        //    dt = new DataTable();
+        //    da.Fill(dt);
+        //    conexion.Close();
+
+        //    return dt;
+
+        //}
+        public string TipoUsuario(string consulta)
+        {
+            conexion.Open();
+            cmd = new MySqlCommand(consulta, conexion);
+            verificar = cmd.ExecuteReader();
+            string encontrado = "";
+
+            if(verificar.Read())
+            {
+                encontrado = Convert.ToString(verificar["Tipo_Usuario"]);
+            }
+            conexion.Close();
+            return encontrado;
+        }
     }
 }
