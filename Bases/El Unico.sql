@@ -9,12 +9,11 @@ use El_Unico;
 create table if not exists Tab_Usuario(
 Id_Usuario int auto_increment not null primary key,
 Nombre_Usuario varchar(50),
-Contrasena_Usuario varchar(50),
-Tipo_Usuario varchar(50)
+Contrasena_Usuario varchar(50)
 )Engine InnoDB;
 
 -- insertar --
-insert into Tab_Usuario(Nombre_Usuario,Contrasena_Usuario,Tipo_Usuario) values('cliente','cliente2020','Empleado'),('proveedor','proveedor2020','Empleado'),('Abmin','Abmin123','Administrador'),('maycol','maycol2020','Administrador');
+insert into Tab_Usuario(Nombre_Usuario,Contrasena_Usuario) values('cliente','cliente2020'),('proveedor','proveedor2020'),('abmin','abmin123');
 
 -- Mostar --
 select * from Tab_Usuario;
