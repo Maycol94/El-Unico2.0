@@ -12,8 +12,10 @@ namespace El_Unico_Grupo3
 {
     public partial class interfazProductos : Form
     {
-        ConexionDataBase ConexionBase = new ConexionDataBase();
+
         private string Agregar;
+        ConexionDataBase ConexionBase = new ConexionDataBase();
+       
         public interfazProductos()
         {
             InitializeComponent();
@@ -26,16 +28,18 @@ namespace El_Unico_Grupo3
 
         private void btnAgregarProductos_Click(object sender, EventArgs e)
         {
-            if (txtIngresarNuevoProducto.Text == string.Empty)// si el cuadro de texto es vacio
+
+            if (txtIngresarNuevoProducto.Text == string.Empty || txtCodigoProducto.Text==string.Empty || txtCostoUnitarioProducto.Text==string.Empty || txtProveedorDeProducto.Text==string.Empty)// si el cuadro de texto es vacio
             {
-                MessageBox.Show("Aun no ha ingresado nada en el campo", "error",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);               
+                MessageBox.Show("Complete los campos solicitados para añadir un nuevo producto", "error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                
-                     Agregar = "INSERT INTO tab_producto (Codigo_Producto,Nombre_Producto,CostoUnitario_Producto,FK_Proveedor_Producto)VALUES (" + txtCodigoProducto + ",'" + txtIngresarNuevoProducto + ",'" + txtCostoUnitarioProducto + ",'" + txtProveedorDeProducto + ")";
-                    if (ConexionBase.Insertar(Agregar))
+
+                Agregar = "INSERT INTO tab_producto(Codigo_Producto,Nombre_Producto,CostoUnitario_Producto,FK_Proveedor_Producto) VALUES ('" + txtCodigoProducto.Text + "','" + txtIngresarNuevoProducto.Text + "','" + txtCostoUnitarioProducto.Text + "','" + txtProveedorDeProducto.Text + "')";
+
+            if (ConexionBase.Insertar(Agregar))
                     {
                         MessageBox.Show("Exito al insertar producto", "Informacion",
                            MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -46,7 +50,7 @@ namespace El_Unico_Grupo3
                         MessageBox.Show("No se pudo insertar nada", "error",
                            MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-             
+
             }
         }
     }
