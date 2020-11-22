@@ -28,7 +28,7 @@ namespace El_Unico_Grupo3
             Contraseña = txtContraseña.Text;
             if(EstaValidado())
             {
-                Consulta = "INSERT INTO tab_usuario (Nombre_Usuario, Contrasena_Usuario) VALUES ('"+usuario +"', '"+ Contraseña + "');";
+                Consulta = "INSERT INTO tab_usuario (Nombre_Usuario, Contrasena_Usuario) VALUES ('" +usuario +"', '"+ Contraseña + "');";
                 if (conexionDB.Insertar(Consulta))
                 {
                     MessageBox.Show("Registro guardato con exito","Información", MessageBoxButtons.OK,MessageBoxIcon.Information);

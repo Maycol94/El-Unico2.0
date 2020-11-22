@@ -38,9 +38,19 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnAgregarProductos = new System.Windows.Forms.Button();
             this.btnActualizarProducto = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtIngresarNuevoProducto = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtCodigoProducto = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtCostoUnitarioProducto = new System.Windows.Forms.TextBox();
+            this.txtProveedorDeProducto = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dGVListadoProductos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -59,7 +69,7 @@
             this.dGVListadoProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVListadoProductos.Location = new System.Drawing.Point(6, 58);
             this.dGVListadoProductos.Name = "dGVListadoProductos";
-            this.dGVListadoProductos.Size = new System.Drawing.Size(477, 228);
+            this.dGVListadoProductos.Size = new System.Drawing.Size(477, 248);
             this.dGVListadoProductos.TabIndex = 1;
             // 
             // groupBox1
@@ -69,9 +79,9 @@
             this.groupBox1.Controls.Add(this.dGVListadoProductos);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(66, 129);
+            this.groupBox1.Location = new System.Drawing.Point(66, 117);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(489, 294);
+            this.groupBox1.Size = new System.Drawing.Size(489, 306);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Productos actuales";
@@ -96,7 +106,7 @@
             // btnELiminarProducto
             // 
             this.btnELiminarProducto.ForeColor = System.Drawing.Color.Black;
-            this.btnELiminarProducto.Location = new System.Drawing.Point(6, 30);
+            this.btnELiminarProducto.Location = new System.Drawing.Point(56, 10);
             this.btnELiminarProducto.Name = "btnELiminarProducto";
             this.btnELiminarProducto.Size = new System.Drawing.Size(116, 29);
             this.btnELiminarProducto.TabIndex = 4;
@@ -106,13 +116,12 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnSalir);
-            this.groupBox2.Controls.Add(this.btnAgregarProductos);
             this.groupBox2.Controls.Add(this.btnActualizarProducto);
             this.groupBox2.Controls.Add(this.btnELiminarProducto);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(577, 129);
+            this.groupBox2.Location = new System.Drawing.Point(577, 314);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(128, 294);
+            this.groupBox2.Size = new System.Drawing.Size(226, 109);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Opciones";
@@ -120,7 +129,7 @@
             // btnSalir
             // 
             this.btnSalir.ForeColor = System.Drawing.Color.Black;
-            this.btnSalir.Location = new System.Drawing.Point(6, 210);
+            this.btnSalir.Location = new System.Drawing.Point(56, 80);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(116, 29);
             this.btnSalir.TabIndex = 7;
@@ -130,7 +139,7 @@
             // btnAgregarProductos
             // 
             this.btnAgregarProductos.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregarProductos.Location = new System.Drawing.Point(6, 89);
+            this.btnAgregarProductos.Location = new System.Drawing.Point(6, 155);
             this.btnAgregarProductos.Name = "btnAgregarProductos";
             this.btnAgregarProductos.Size = new System.Drawing.Size(116, 30);
             this.btnAgregarProductos.TabIndex = 6;
@@ -141,12 +150,95 @@
             // btnActualizarProducto
             // 
             this.btnActualizarProducto.ForeColor = System.Drawing.Color.Black;
-            this.btnActualizarProducto.Location = new System.Drawing.Point(6, 153);
+            this.btnActualizarProducto.Location = new System.Drawing.Point(56, 45);
             this.btnActualizarProducto.Name = "btnActualizarProducto";
             this.btnActualizarProducto.Size = new System.Drawing.Size(116, 29);
             this.btnActualizarProducto.TabIndex = 5;
             this.btnActualizarProducto.Text = "Actualizar Producto";
             this.btnActualizarProducto.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.txtProveedorDeProducto);
+            this.groupBox3.Controls.Add(this.txtCostoUnitarioProducto);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.txtCodigoProducto);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Controls.Add(this.txtIngresarNuevoProducto);
+            this.groupBox3.Controls.Add(this.btnAgregarProductos);
+            this.groupBox3.ForeColor = System.Drawing.Color.White;
+            this.groupBox3.Location = new System.Drawing.Point(577, 117);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(226, 191);
+            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Agregar nuevo producto";
+            // 
+            // txtIngresarNuevoProducto
+            // 
+            this.txtIngresarNuevoProducto.Location = new System.Drawing.Point(104, 68);
+            this.txtIngresarNuevoProducto.Name = "txtIngresarNuevoProducto";
+            this.txtIngresarNuevoProducto.Size = new System.Drawing.Size(116, 20);
+            this.txtIngresarNuevoProducto.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(88, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Codigo producto:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 71);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(92, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Nombre producto:";
+            // 
+            // txtCodigoProducto
+            // 
+            this.txtCodigoProducto.Location = new System.Drawing.Point(104, 41);
+            this.txtCodigoProducto.Name = "txtCodigoProducto";
+            this.txtCodigoProducto.Size = new System.Drawing.Size(116, 20);
+            this.txtCodigoProducto.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 97);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Costo unitario:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 127);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Proveedor:";
+            // 
+            // txtCostoUnitarioProducto
+            // 
+            this.txtCostoUnitarioProducto.Location = new System.Drawing.Point(104, 94);
+            this.txtCostoUnitarioProducto.Name = "txtCostoUnitarioProducto";
+            this.txtCostoUnitarioProducto.Size = new System.Drawing.Size(116, 20);
+            this.txtCostoUnitarioProducto.TabIndex = 13;
+            // 
+            // txtProveedorDeProducto
+            // 
+            this.txtProveedorDeProducto.Location = new System.Drawing.Point(104, 124);
+            this.txtProveedorDeProducto.Name = "txtProveedorDeProducto";
+            this.txtProveedorDeProducto.Size = new System.Drawing.Size(116, 20);
+            this.txtProveedorDeProducto.TabIndex = 14;
             // 
             // interfazProductos
             // 
@@ -154,6 +246,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(883, 485);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -165,6 +258,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,5 +277,14 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnAgregarProductos;
         private System.Windows.Forms.Button btnActualizarProducto;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox txtIngresarNuevoProducto;
+        private System.Windows.Forms.TextBox txtProveedorDeProducto;
+        private System.Windows.Forms.TextBox txtCostoUnitarioProducto;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtCodigoProducto;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }
