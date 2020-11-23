@@ -19,7 +19,7 @@ namespace El_Unico_Grupo3
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            
         }
 
         private void btnCerrarAdmin_Click(object sender, EventArgs e)
