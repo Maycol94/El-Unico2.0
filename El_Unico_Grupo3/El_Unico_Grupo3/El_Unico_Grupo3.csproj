@@ -67,11 +67,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConexionDataBase.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmInicio.cs">
       <SubType>Form</SubType>
@@ -85,22 +91,49 @@
     <Compile Include="FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="interfazProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfazProductos.Designer.cs">
+      <DependentUpon>interfazProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inventario.Designer.cs">
       <DependentUpon>Inventario.cs</DependentUpon>
     </Compile>
-    <Compile Include="InicioCliente.cs">
+    <Compile Include="InicioEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InicioCliente.Designer.cs">
-      <DependentUpon>InicioCliente.cs</DependentUpon>
+    <Compile Include="InicioEmpleado.Designer.cs">
+      <DependentUpon>InicioEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroCliente.Designer.cs">
+      <DependentUpon>RegistroCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="InicioAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioAdmin.Designer.cs">
+      <DependentUpon>InicioAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroFactura.Designer.cs">
+      <DependentUpon>RegistroFactura.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInicio.resx">
       <DependentUpon>FrmInicio.cs</DependentUpon>
@@ -108,8 +141,14 @@
     <EmbeddedResource Include="FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="interfazProductos.resx">
+      <DependentUpon>interfazProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroCliente.resx">
+      <DependentUpon>RegistroCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -121,8 +160,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="InicioCliente.resx">
-      <DependentUpon>InicioCliente.cs</DependentUpon>
+    <EmbeddedResource Include="InicioEmpleado.resx">
+      <DependentUpon>InicioEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioAdmin.resx">
+      <DependentUpon>InicioAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroFactura.resx">
+      <DependentUpon>RegistroFactura.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
