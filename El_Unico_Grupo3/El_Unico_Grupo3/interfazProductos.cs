@@ -62,7 +62,8 @@ namespace El_Unico_Grupo3
                MessageBoxButtons.OK, MessageBoxIcon.Information);
                 e.Handled = true;
                 return;
-            }
+            }
+
         }
 
         private void txtNumerosProveedor_KeyPress(object sender, KeyPressEventArgs e)
@@ -73,7 +74,8 @@ namespace El_Unico_Grupo3
                MessageBoxButtons.OK, MessageBoxIcon.Information);
                 e.Handled = true;
                 return;
-            }
+            }
+
         }
     }
 }
