@@ -30,30 +30,30 @@
         {
             System.Windows.Forms.Button btnUsuarios;
             System.Windows.Forms.Button btnProductos;
-            System.Windows.Forms.Button btnCarrito;
+            System.Windows.Forms.Button btnFactura;
             System.Windows.Forms.Button btnProveedor;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistroClientes));
             System.Windows.Forms.Button btnPedidos;
             System.Windows.Forms.Button btnClientes;
             System.Windows.Forms.Button button1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistroClientes));
             this.pnTitulo = new System.Windows.Forms.Panel();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnExpandir = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.pnVertical = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnContenedor = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
             btnUsuarios = new System.Windows.Forms.Button();
             btnProductos = new System.Windows.Forms.Button();
-            btnCarrito = new System.Windows.Forms.Button();
+            btnFactura = new System.Windows.Forms.Button();
             btnProveedor = new System.Windows.Forms.Button();
             btnPedidos = new System.Windows.Forms.Button();
             btnClientes = new System.Windows.Forms.Button();
@@ -105,23 +105,24 @@
             btnProductos.UseVisualStyleBackColor = false;
             btnProductos.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnCarrito
+            // btnFactura
             // 
-            btnCarrito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            btnCarrito.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnCarrito.FlatAppearance.BorderSize = 0;
-            btnCarrito.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            btnCarrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnCarrito.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            btnCarrito.ForeColor = System.Drawing.Color.White;
-            btnCarrito.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnCarrito.Location = new System.Drawing.Point(12, 345);
-            btnCarrito.Name = "btnCarrito";
-            btnCarrito.Size = new System.Drawing.Size(175, 40);
-            btnCarrito.TabIndex = 4;
-            btnCarrito.Text = "Carrito";
-            btnCarrito.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            btnCarrito.UseVisualStyleBackColor = false;
+            btnFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            btnFactura.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnFactura.FlatAppearance.BorderSize = 0;
+            btnFactura.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            btnFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnFactura.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnFactura.ForeColor = System.Drawing.Color.White;
+            btnFactura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnFactura.Location = new System.Drawing.Point(12, 345);
+            btnFactura.Name = "btnFactura";
+            btnFactura.Size = new System.Drawing.Size(175, 40);
+            btnFactura.TabIndex = 4;
+            btnFactura.Text = "Factura";
+            btnFactura.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnFactura.UseVisualStyleBackColor = false;
+            btnFactura.Click += new System.EventHandler(this.btnFactura_Click);
             // 
             // btnProveedor
             // 
@@ -140,6 +141,62 @@
             btnProveedor.Text = "Proveedor";
             btnProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             btnProveedor.UseVisualStyleBackColor = false;
+            // 
+            // btnPedidos
+            // 
+            btnPedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            btnPedidos.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnPedidos.FlatAppearance.BorderSize = 0;
+            btnPedidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnPedidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnPedidos.ForeColor = System.Drawing.Color.White;
+            btnPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnPedidos.Location = new System.Drawing.Point(12, 437);
+            btnPedidos.Name = "btnPedidos";
+            btnPedidos.Size = new System.Drawing.Size(175, 40);
+            btnPedidos.TabIndex = 6;
+            btnPedidos.Text = "Pedidos";
+            btnPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnPedidos.UseVisualStyleBackColor = false;
+            // 
+            // btnClientes
+            // 
+            btnClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            btnClientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnClientes.FlatAppearance.BorderSize = 0;
+            btnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnClientes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnClientes.ForeColor = System.Drawing.Color.White;
+            btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnClientes.Location = new System.Drawing.Point(12, 483);
+            btnClientes.Name = "btnClientes";
+            btnClientes.Size = new System.Drawing.Size(172, 40);
+            btnClientes.TabIndex = 6;
+            btnClientes.Text = "Clientes";
+            btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnClientes.UseVisualStyleBackColor = false;
+            btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
+            // 
+            // button1
+            // 
+            button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            button1.ForeColor = System.Drawing.Color.White;
+            button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            button1.Location = new System.Drawing.Point(12, 529);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(172, 40);
+            button1.TabIndex = 6;
+            button1.Text = "Cerrar";
+            button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // pnTitulo
             // 
@@ -219,7 +276,7 @@
             this.pnVertical.Controls.Add(btnPedidos);
             this.pnVertical.Controls.Add(btnProveedor);
             this.pnVertical.Controls.Add(this.panel3);
-            this.pnVertical.Controls.Add(btnCarrito);
+            this.pnVertical.Controls.Add(btnFactura);
             this.pnVertical.Controls.Add(this.panel2);
             this.pnVertical.Controls.Add(btnProductos);
             this.pnVertical.Controls.Add(this.panel1);
@@ -230,6 +287,30 @@
             this.pnVertical.Name = "pnVertical";
             this.pnVertical.Size = new System.Drawing.Size(187, 615);
             this.pnVertical.TabIndex = 1;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel7.Location = new System.Drawing.Point(0, 529);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(10, 40);
+            this.panel7.TabIndex = 5;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel6.Location = new System.Drawing.Point(0, 483);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(10, 40);
+            this.panel6.TabIndex = 5;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel5.Location = new System.Drawing.Point(0, 437);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(10, 40);
+            this.panel5.TabIndex = 5;
             // 
             // panel4
             // 
@@ -282,84 +363,6 @@
             this.pnContenedor.Name = "pnContenedor";
             this.pnContenedor.Size = new System.Drawing.Size(1113, 615);
             this.pnContenedor.TabIndex = 2;
-            // 
-            // btnPedidos
-            // 
-            btnPedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            btnPedidos.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnPedidos.FlatAppearance.BorderSize = 0;
-            btnPedidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnPedidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            btnPedidos.ForeColor = System.Drawing.Color.White;
-            btnPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnPedidos.Location = new System.Drawing.Point(12, 437);
-            btnPedidos.Name = "btnPedidos";
-            btnPedidos.Size = new System.Drawing.Size(175, 40);
-            btnPedidos.TabIndex = 6;
-            btnPedidos.Text = "Pedidos";
-            btnPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            btnPedidos.UseVisualStyleBackColor = false;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel5.Location = new System.Drawing.Point(0, 437);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(10, 40);
-            this.panel5.TabIndex = 5;
-            // 
-            // btnClientes
-            // 
-            btnClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            btnClientes.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnClientes.FlatAppearance.BorderSize = 0;
-            btnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnClientes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            btnClientes.ForeColor = System.Drawing.Color.White;
-            btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnClientes.Location = new System.Drawing.Point(12, 483);
-            btnClientes.Name = "btnClientes";
-            btnClientes.Size = new System.Drawing.Size(172, 40);
-            btnClientes.TabIndex = 6;
-            btnClientes.Text = "Clientes";
-            btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            btnClientes.UseVisualStyleBackColor = false;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel6.Location = new System.Drawing.Point(0, 483);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(10, 40);
-            this.panel6.TabIndex = 5;
-            // 
-            // button1
-            // 
-            button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            button1.ForeColor = System.Drawing.Color.White;
-            button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            button1.Location = new System.Drawing.Point(12, 529);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(172, 40);
-            button1.TabIndex = 6;
-            button1.Text = "Cerrar";
-            button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel7.Location = new System.Drawing.Point(0, 529);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(10, 40);
-            this.panel7.TabIndex = 5;
             // 
             // frmRegistroClientes
             // 

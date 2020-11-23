@@ -36,18 +36,30 @@ namespace El_Unico_Grupo3
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            frmRegistroClientes cliente = new frmRegistroClientes();
-
+            InicioAdmin Admin = new InicioAdmin();
+            frmRegistroClientes Empleado = new frmRegistroClientes();
             if (EstaValidado())
             {
                 string consulta = "SELECT * FROM tab_usuario WHERE Nombre_Usuario='" + txtUsuario.Text + "' AND Contrasena_Usuario='" + txtContraseña.Text + "'";
                 if (conexionDB.Login(consulta))
                 {
-                    this.Hide();
-                    MessageBox.Show("Bienvenido");
-                    
-                    cliente.Show();
+                    MessageBox.Show("Bienvenido");  
 
+                    string TipoUsuario;
+                    TipoUsuario = "SELECT Tipo_Usuario FROM tab_usuario WHERE Nombre_Usuario='" + txtUsuario.Text + "' AND Contrasena_Usuario='" + txtContraseña.Text + "'";
+                    MessageBox.Show(conexionDB.TipoUsuario(TipoUsuario));
+                    if (conexionDB.TipoUsuario(TipoUsuario).ToString() == "Administrador")
+                    {
+                        this.Hide();
+                        MessageBox.Show("Bienvenido");
+                        Admin.Show();
+                    }
+
+                    else
+                    {
+                        this.Hide();
+                        Empleado.Show();
+                    }
                 }
                 else
                 {
@@ -113,6 +125,11 @@ namespace El_Unico_Grupo3
                 txtContraseña.ForeColor = Color.Silver;
                 txtContraseña.UseSystemPasswordChar = false;
             }
+        }
+
+        private void frmElUnico_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
