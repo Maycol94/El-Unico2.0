@@ -13,9 +13,7 @@ namespace El_Unico_Grupo3
     public partial class RegistroFactura : Form
     {
         ConexionDataBase conexionDB = new ConexionDataBase();
-        private string consulta;
-        private int Cantidad;
-        private double presioUnitario, total;
+      
         
         public RegistroFactura()
         {
@@ -27,15 +25,8 @@ namespace El_Unico_Grupo3
         {
             //Fecha automatica
             lblFecha.Text = DateTime.Now.ToString("d");
-            //Llenar lista con Clientes  select nombre_Cliente from tab_cliente;
-          /*  cbvClientesFactura.DataSource = conexionDB.LlenarGrid("select nombre_Cliente from tab_cliente");
-
-            if (cbvClientesFactura.SelectedItem == null)
-            {
-                 
-            }
-          */
-            dgvProductoFacturado.DataSource = conexionDB.LlenarGrid("select * from tab_Ventas");
+           
+          //  dgvProductoFacturado.DataSource = conexionDB.LlenarGrid("select * from tab_Ventas");
 
         }
 
@@ -56,12 +47,12 @@ namespace El_Unico_Grupo3
 
         private void btnRegistrarVenta_Click(object sender, EventArgs e)
         {
-            //Calculo de total de venta Registrada
+        /*    //Calculo de total de venta Registrada
             Cantidad = int.Parse(txtCantidadVenta.Text);
             presioUnitario = double.Parse(txtPresioUnitario.Text);
             total = Cantidad* presioUnitario;
             //Mostrar total
-            txtTotal.Text = total.ToString("N2");
+            txtTotal.Text = total.ToString("N2");*/
 
         }
 

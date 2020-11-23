@@ -10,16 +10,26 @@ using System.Windows.Forms;
 
 namespace El_Unico_Grupo3
 {
-    public partial class frmRegistroClientes : Form
+    public partial class InicioAdmin : Form
     {
-        public frmRegistroClientes()
+        public InicioAdmin()
         {
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void btnClientes_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnCerrarAdmin_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void btnExpandir_Click(object sender, EventArgs e)
@@ -27,16 +37,6 @@ namespace El_Unico_Grupo3
             this.WindowState = FormWindowState.Normal;
             btnExpandir.Visible = false;
             btnMaximizar.Visible = true;
-
-        }
-
-
-
-        private void btnMaximizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            btnMaximizar.Visible = false;
-            btnExpandir.Visible = true;
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -44,9 +44,11 @@ namespace El_Unico_Grupo3
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnMaximizar_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new interfazProductos());
+            this.WindowState = FormWindowState.Maximized;
+            btnMaximizar.Visible = false;
+            btnExpandir.Visible = true;
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
@@ -64,11 +66,6 @@ namespace El_Unico_Grupo3
             this.pnContenedor.Tag = fh;
             fh.Show();
 
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-            AbrirFormEnPanel(new FrmInicio());
         }
     }
 }
