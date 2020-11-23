@@ -120,6 +120,7 @@
             this.btnSalir.TabIndex = 7;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnActualizarProducto
             // 
@@ -178,7 +179,6 @@
             this.txtCostoUnitarioProducto.Name = "txtCostoUnitarioProducto";
             this.txtCostoUnitarioProducto.Size = new System.Drawing.Size(136, 20);
             this.txtCostoUnitarioProducto.TabIndex = 13;
-            this.txtCostoUnitarioProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeros_KeyPress);
             // 
             // label5
             // 
