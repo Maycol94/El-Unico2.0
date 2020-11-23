@@ -185,3 +185,17 @@ Inner join Tab_Producto p on p.Id_Producto = f.FK_Producto_Factura
 inner join Tab_Inventario iv on iv.Id_Inventario = f.FK_Inventario_Factura;
 
 -- Si le modificamos estoy a sus ordenes --
+
+    © 2020 GitHub, Inc.
+    Terms
+    Privacy
+    Security
+    Status
+    Help
+    Contact GitHub
+    Pricing
+    API
+    Training
+    Blog
+    About
+

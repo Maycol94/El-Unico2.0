@@ -67,11 +67,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConexionDataBase.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
@@ -103,11 +103,11 @@
     <Compile Include="Inventario.Designer.cs">
       <DependentUpon>Inventario.cs</DependentUpon>
     </Compile>
-    <Compile Include="InicioCliente.cs">
+    <Compile Include="InicioEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InicioCliente.Designer.cs">
-      <DependentUpon>InicioCliente.cs</DependentUpon>
+    <Compile Include="InicioEmpleado.Designer.cs">
+      <DependentUpon>InicioEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistroCliente.cs">
       <SubType>Form</SubType>
@@ -129,8 +129,8 @@
     <Compile Include="RegistroFactura.Designer.cs">
       <DependentUpon>RegistroFactura.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
@@ -160,8 +160,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="InicioCliente.resx">
-      <DependentUpon>InicioCliente.cs</DependentUpon>
+    <EmbeddedResource Include="InicioEmpleado.resx">
+      <DependentUpon>InicioEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InicioAdmin.resx">
       <DependentUpon>InicioAdmin.cs</DependentUpon>

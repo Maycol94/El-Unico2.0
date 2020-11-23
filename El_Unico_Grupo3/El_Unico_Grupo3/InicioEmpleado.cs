@@ -73,7 +73,7 @@ namespace El_Unico_Grupo3
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            RegistroCliente cliente = new RegistroCliente();
+            
             
             AbrirFormEnPanel(new RegistroCliente());
         }
@@ -81,6 +81,11 @@ namespace El_Unico_Grupo3
         private void button1_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnFactura_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new RegistroFactura());
         }
     }
 }

@@ -122,6 +122,7 @@
             btnFactura.Text = "Factura";
             btnFactura.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             btnFactura.UseVisualStyleBackColor = false;
+            btnFactura.Click += new System.EventHandler(this.btnFactura_Click);
             // 
             // btnProveedor
             // 
