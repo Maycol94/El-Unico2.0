@@ -67,5 +67,10 @@ namespace El_Unico_Grupo3
             fh.Show();
 
         }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            this.AbrirFormEnPanel(new interfazProductos());
+        }
     }
 }
