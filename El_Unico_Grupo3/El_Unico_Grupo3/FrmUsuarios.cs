@@ -68,6 +68,12 @@ namespace El_Unico_Grupo3
                 cbxTipoUsuario.SelectedItem = 0;
             }
             dgvUsuarios.DataSource = conexionDB.LlenarGrid("SELECT * FROM tab_usuario");
+         
+        }
+
+        private void btnBuscarPorID_Click(object sender, EventArgs e)
+        {
+            dgvUsuarios.DataSource = conexionDB.BuscarPorID("Select * From tab_usuario where Id_Usuario="+ txtIdUsuario.Text);
         }
     }
 }
