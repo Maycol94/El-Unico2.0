@@ -89,9 +89,9 @@
             // btnVolveraMostrarTodosLosRegistros
             // 
             this.btnVolveraMostrarTodosLosRegistros.ForeColor = System.Drawing.Color.Black;
-            this.btnVolveraMostrarTodosLosRegistros.Location = new System.Drawing.Point(251, 41);
+            this.btnVolveraMostrarTodosLosRegistros.Location = new System.Drawing.Point(275, 41);
             this.btnVolveraMostrarTodosLosRegistros.Name = "btnVolveraMostrarTodosLosRegistros";
-            this.btnVolveraMostrarTodosLosRegistros.Size = new System.Drawing.Size(133, 21);
+            this.btnVolveraMostrarTodosLosRegistros.Size = new System.Drawing.Size(109, 21);
             this.btnVolveraMostrarTodosLosRegistros.TabIndex = 8;
             this.btnVolveraMostrarTodosLosRegistros.Text = "Volver a mostrar todo";
             this.btnVolveraMostrarTodosLosRegistros.UseVisualStyleBackColor = true;
@@ -100,9 +100,9 @@
             // btnBuscarProducto
             // 
             this.btnBuscarProducto.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscarProducto.Location = new System.Drawing.Point(315, 14);
+            this.btnBuscarProducto.Location = new System.Drawing.Point(275, 14);
             this.btnBuscarProducto.Name = "btnBuscarProducto";
-            this.btnBuscarProducto.Size = new System.Drawing.Size(69, 21);
+            this.btnBuscarProducto.Size = new System.Drawing.Size(109, 20);
             this.btnBuscarProducto.TabIndex = 3;
             this.btnBuscarProducto.Text = "Buscar";
             this.btnBuscarProducto.UseVisualStyleBackColor = true;
@@ -110,7 +110,8 @@
             // 
             // txtBuscarProducto
             // 
-            this.txtBuscarProducto.Location = new System.Drawing.Point(137, 14);
+            this.txtBuscarProducto.Location = new System.Drawing.Point(96, 14);
+            this.txtBuscarProducto.Multiline = true;
             this.txtBuscarProducto.Name = "txtBuscarProducto";
             this.txtBuscarProducto.Size = new System.Drawing.Size(172, 20);
             this.txtBuscarProducto.TabIndex = 2;
