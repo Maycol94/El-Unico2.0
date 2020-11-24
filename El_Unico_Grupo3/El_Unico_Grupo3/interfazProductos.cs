@@ -15,6 +15,7 @@ namespace El_Unico_Grupo3
 
         private string Agregar;
         private double Costo;
+        private string BuscarCodigo;
         ConexionDataBase ConexionBase = new ConexionDataBase();
        
         public interfazProductos()
@@ -100,6 +101,29 @@ namespace El_Unico_Grupo3
             {
                 Close();
             }
+        }
+
+        private void btnBuscarProducto_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                BuscarCodigo = txtBuscarProducto.Text;
+
+                dGVListadoProductos.DataSource = ConexionBase.LlenarGrid("SELECT pr.Codigo_Producto , pr.Nombre_Producto,pr.CostoUnitario_Producto,p.Nombre_Proveedor,p.Telefono_Proveedor FROM Tab_Producto pr Inner join Tab_Proveedor p on p.Id_Proveedor = pr.FK_Proveedor_Producto Where pr.Codigo_Producto =  '" + BuscarCodigo + "'");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("no se pudo hacer la consulta", "error",
+                         MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        private void btnVolveraMostrarTodosLosRegistros_Click(object sender, EventArgs e)
+        {
+            dGVListadoProductos.DataSource = ConexionBase.LlenarGrid("SELECT pr.Codigo_Producto , pr.Nombre_Producto,pr.CostoUnitario_Producto,p.Nombre_Proveedor,p.Telefono_Proveedor FROM Tab_Producto pr Inner join Tab_Proveedor p on p.Id_Proveedor = pr.FK_Proveedor_Producto ");
+            txtBuscarProducto.Clear();
         }
     }
 }

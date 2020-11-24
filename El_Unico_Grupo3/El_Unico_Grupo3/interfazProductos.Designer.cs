@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dGVListadoProductos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnVolveraMostrarTodosLosRegistros = new System.Windows.Forms.Button();
             this.btnBuscarProducto = new System.Windows.Forms.Button();
             this.txtBuscarProducto = new System.Windows.Forms.TextBox();
             this.btnELiminarProducto = new System.Windows.Forms.Button();
@@ -72,6 +73,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnVolveraMostrarTodosLosRegistros);
             this.groupBox1.Controls.Add(this.btnBuscarProducto);
             this.groupBox1.Controls.Add(this.txtBuscarProducto);
             this.groupBox1.Controls.Add(this.dGVListadoProductos);
@@ -84,19 +86,31 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Productos actuales";
             // 
+            // btnVolveraMostrarTodosLosRegistros
+            // 
+            this.btnVolveraMostrarTodosLosRegistros.ForeColor = System.Drawing.Color.Black;
+            this.btnVolveraMostrarTodosLosRegistros.Location = new System.Drawing.Point(251, 41);
+            this.btnVolveraMostrarTodosLosRegistros.Name = "btnVolveraMostrarTodosLosRegistros";
+            this.btnVolveraMostrarTodosLosRegistros.Size = new System.Drawing.Size(133, 21);
+            this.btnVolveraMostrarTodosLosRegistros.TabIndex = 8;
+            this.btnVolveraMostrarTodosLosRegistros.Text = "Volver a mostrar todo";
+            this.btnVolveraMostrarTodosLosRegistros.UseVisualStyleBackColor = true;
+            this.btnVolveraMostrarTodosLosRegistros.Click += new System.EventHandler(this.btnVolveraMostrarTodosLosRegistros_Click);
+            // 
             // btnBuscarProducto
             // 
             this.btnBuscarProducto.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscarProducto.Location = new System.Drawing.Point(315, 24);
+            this.btnBuscarProducto.Location = new System.Drawing.Point(315, 14);
             this.btnBuscarProducto.Name = "btnBuscarProducto";
             this.btnBuscarProducto.Size = new System.Drawing.Size(69, 21);
             this.btnBuscarProducto.TabIndex = 3;
             this.btnBuscarProducto.Text = "Buscar";
             this.btnBuscarProducto.UseVisualStyleBackColor = true;
+            this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
             // 
             // txtBuscarProducto
             // 
-            this.txtBuscarProducto.Location = new System.Drawing.Point(134, 25);
+            this.txtBuscarProducto.Location = new System.Drawing.Point(137, 14);
             this.txtBuscarProducto.Name = "txtBuscarProducto";
             this.txtBuscarProducto.Size = new System.Drawing.Size(172, 20);
             this.txtBuscarProducto.TabIndex = 2;
@@ -273,5 +287,6 @@
         private System.Windows.Forms.TextBox txtCodigoProducto;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnVolveraMostrarTodosLosRegistros;
     }
 }
