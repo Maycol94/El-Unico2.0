@@ -24,12 +24,16 @@ namespace El_Unico_Grupo3
 
         private void btnCerrarAdmin_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            frmElUnico login = new frmElUnico();
+            login.Show();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            frmElUnico login = new frmElUnico();
+            login.Show();
         }
 
         private void btnExpandir_Click(object sender, EventArgs e)

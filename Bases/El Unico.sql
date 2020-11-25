@@ -9,8 +9,8 @@ use El_Unico;
 create table if not exists Tab_Usuario(
 Id_Usuario int auto_increment not null primary key,
 Nombre_Usuario varchar(50),
-Tipo_Usuario varchar(50),
-Contrasena_Usuario varchar(50)
+Contrasena_Usuario varchar(50),
+Tipo_Usuario varchar(50)
 )Engine InnoDB;
 
 -- insertar --
@@ -72,7 +72,8 @@ insert into Tab_Producto(Codigo_Producto,Nombre_Producto,CostoUnitario_Producto,
 -- Mostrar --
 select pr.Codigo_Producto, pr.Nombre_Producto,pr.CostoUnitario_Producto,p.Nombre_Proveedor,p.Telefono_Proveedor from Tab_Producto pr
 Inner join Tab_Proveedor p on p.Id_Proveedor = pr.FK_Proveedor_Producto;
- 
+ -- Seleccion nombre producto
+ select nombre_Producto from tab_producto;
 -- Tabla Pedido --
 Create table if not exists Tab_Pedido(
 Id_Pedido int primary key not null auto_increment,
@@ -153,12 +154,14 @@ constraint fk_Id_Producto_Venta foreign key (FK_Producto_Venta) references Tab_P
 -- insertar --
 insert into Tab_Venta(Fecha_Venta,Cantidad_Venta,Total_Venta,FK_Inventario_Venta,FK_Producto_Venta,FK_Existencia_Venta ) values(curdate(),5,2.50,1,1,1);
 
+ select nombre_Producto from tab_producto;
+
 -- Mostrar --
 select v.fecha_Venta,v.Cantidad_Venta, iv.PrecioVentaUnitario_Inventario,v.Total_Venta, pr.Nombre_Producto,ex.Cantidad_Existencia  from Tab_Venta v
 inner join Tab_Inventario iv on iv.Id_Inventario = v.FK_Inventario_Venta
 inner join Tab_Producto pr on pr.Id_Producto = v.FK_Producto_Venta
 inner join Tab_Existencia ex on ex.Id_Existencia = v.FK_Existencia_Venta;
-
+select nombre_Cliente from tab_cliente;
 
 -- Tabla Factura --
 Create table if not exists Tab_Factura(

@@ -38,14 +38,14 @@ namespace El_Unico_Grupo3
             this.txtCodigoFactura = new System.Windows.Forms.TextBox();
             this.cbvClientesFactura = new System.Windows.Forms.ComboBox();
             this.gbRegistroVentas = new System.Windows.Forms.GroupBox();
-            this.txtCantidadVenta = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnRegistrarVenta = new System.Windows.Forms.Button();
             this.txtPresioUnitario = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnRegistrarVenta = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.cbbProductos = new System.Windows.Forms.ComboBox();
+            this.txtCantidadVenta = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.dgvProductoFacturado = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -128,7 +128,7 @@ namespace El_Unico_Grupo3
             this.gbRegistroVentas.Controls.Add(this.btnRegistrarVenta);
             this.gbRegistroVentas.Controls.Add(this.txtPresioUnitario);
             this.gbRegistroVentas.Controls.Add(this.label7);
-            this.gbRegistroVentas.Controls.Add(this.comboBox1);
+            this.gbRegistroVentas.Controls.Add(this.cbbProductos);
             this.gbRegistroVentas.Controls.Add(this.txtCantidadVenta);
             this.gbRegistroVentas.Controls.Add(this.label6);
             this.gbRegistroVentas.Controls.Add(this.label5);
@@ -140,40 +140,32 @@ namespace El_Unico_Grupo3
             this.gbRegistroVentas.TabStop = false;
             this.gbRegistroVentas.Text = "Registrar Venta";
             // 
-            // txtCantidadVenta
+            // btnLimpiar
             // 
-            this.txtCantidadVenta.Location = new System.Drawing.Point(22, 67);
-            this.txtCantidadVenta.Name = "txtCantidadVenta";
-            this.txtCantidadVenta.Size = new System.Drawing.Size(132, 26);
-            this.txtCantidadVenta.TabIndex = 8;
+            this.btnLimpiar.BackColor = System.Drawing.Color.Yellow;
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.ForeColor = System.Drawing.Color.Black;
+            this.btnLimpiar.Location = new System.Drawing.Point(416, 134);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(98, 48);
+            this.btnLimpiar.TabIndex = 15;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
-            // label5
+            // btnRegistrarVenta
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 36);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 19);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Cantidad:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "-- Seleccione un Producto"});
-            this.comboBox1.Location = new System.Drawing.Point(167, 68);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(347, 27);
-            this.comboBox1.TabIndex = 10;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(163, 36);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 19);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Producto";
+            this.btnRegistrarVenta.BackColor = System.Drawing.Color.Green;
+            this.btnRegistrarVenta.FlatAppearance.BorderSize = 0;
+            this.btnRegistrarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrarVenta.Location = new System.Drawing.Point(167, 134);
+            this.btnRegistrarVenta.Name = "btnRegistrarVenta";
+            this.btnRegistrarVenta.Size = new System.Drawing.Size(98, 48);
+            this.btnRegistrarVenta.TabIndex = 14;
+            this.btnRegistrarVenta.Text = "Registrar";
+            this.btnRegistrarVenta.UseVisualStyleBackColor = false;
+            this.btnRegistrarVenta.Click += new System.EventHandler(this.btnRegistrarVenta_Click);
             // 
             // txtPresioUnitario
             // 
@@ -191,32 +183,41 @@ namespace El_Unico_Grupo3
             this.label7.TabIndex = 11;
             this.label7.Text = "Precio Unitario";
             // 
-            // btnRegistrarVenta
+            // cbbProductos
             // 
-            this.btnRegistrarVenta.BackColor = System.Drawing.Color.Green;
-            this.btnRegistrarVenta.FlatAppearance.BorderSize = 0;
-            this.btnRegistrarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarVenta.Location = new System.Drawing.Point(167, 134);
-            this.btnRegistrarVenta.Name = "btnRegistrarVenta";
-            this.btnRegistrarVenta.Size = new System.Drawing.Size(98, 48);
-            this.btnRegistrarVenta.TabIndex = 14;
-            this.btnRegistrarVenta.Text = "Registrar";
-            this.btnRegistrarVenta.UseVisualStyleBackColor = false;
-            this.btnRegistrarVenta.Click += new System.EventHandler(this.btnRegistrarVenta_Click);
+            this.cbbProductos.FormattingEnabled = true;
+            this.cbbProductos.Items.AddRange(new object[] {
+            "-- Seleccione un Producto"});
+            this.cbbProductos.Location = new System.Drawing.Point(167, 68);
+            this.cbbProductos.Name = "cbbProductos";
+            this.cbbProductos.Size = new System.Drawing.Size(347, 27);
+            this.cbbProductos.TabIndex = 10;
+            this.cbbProductos.SelectedIndexChanged += new System.EventHandler(this.cbbProductos_SelectedIndexChanged);
             // 
-            // btnLimpiar
+            // txtCantidadVenta
             // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.Yellow;
-            this.btnLimpiar.FlatAppearance.BorderSize = 0;
-            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.ForeColor = System.Drawing.Color.Black;
-            this.btnLimpiar.Location = new System.Drawing.Point(416, 134);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(98, 48);
-            this.btnLimpiar.TabIndex = 15;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = false;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            this.txtCantidadVenta.Location = new System.Drawing.Point(22, 67);
+            this.txtCantidadVenta.Name = "txtCantidadVenta";
+            this.txtCantidadVenta.Size = new System.Drawing.Size(132, 26);
+            this.txtCantidadVenta.TabIndex = 8;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(163, 36);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 19);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Producto";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(18, 36);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 19);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Cantidad:";
             // 
             // dgvProductoFacturado
             // 
@@ -343,7 +344,7 @@ namespace El_Unico_Grupo3
         private System.Windows.Forms.GroupBox gbRegistroVentas;
         private System.Windows.Forms.TextBox txtPresioUnitario;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbProductos;
         private System.Windows.Forms.TextBox txtCantidadVenta;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
