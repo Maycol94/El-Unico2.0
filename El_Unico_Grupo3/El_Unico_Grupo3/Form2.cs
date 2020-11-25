@@ -16,5 +16,10 @@ namespace El_Unico_Grupo3
         {
             InitializeComponent();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
