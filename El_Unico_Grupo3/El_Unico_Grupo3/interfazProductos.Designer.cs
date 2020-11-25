@@ -70,6 +70,7 @@
             this.dGVListadoProductos.Name = "dGVListadoProductos";
             this.dGVListadoProductos.Size = new System.Drawing.Size(384, 185);
             this.dGVListadoProductos.TabIndex = 1;
+            this.dGVListadoProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVListadoProductos_CellContentClick);
             // 
             // groupBox1
             // 
