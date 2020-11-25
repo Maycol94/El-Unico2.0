@@ -19,7 +19,9 @@ namespace El_Unico_Grupo3
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            frmElUnico login = new frmElUnico();
+            login.Show();
         }
 
         private void btnExpandir_Click(object sender, EventArgs e)
@@ -80,7 +82,9 @@ namespace El_Unico_Grupo3
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            frmElUnico login = new frmElUnico();
+            login.Show();
         }
 
         private void btnFactura_Click(object sender, EventArgs e)
