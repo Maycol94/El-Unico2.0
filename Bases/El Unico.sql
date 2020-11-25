@@ -9,8 +9,8 @@ use El_Unico;
 create table if not exists Tab_Usuario(
 Id_Usuario int auto_increment not null primary key,
 Nombre_Usuario varchar(50),
-Contrasena_Usuario varchar(50),
-Tipo_Usuario varchar(50)
+Tipo_Usuario varchar(50),
+Contrasena_Usuario varchar(50)
 )Engine InnoDB;
 
 -- insertar --

@@ -51,7 +51,6 @@ namespace El_Unico_Grupo3
                     if (conexionDB.TipoUsuario(TipoUsuario).ToString() == "Administrador")
                     {
                         this.Hide();
-                        MessageBox.Show("Bienvenido");
                         Admin.Show();
                     }
 

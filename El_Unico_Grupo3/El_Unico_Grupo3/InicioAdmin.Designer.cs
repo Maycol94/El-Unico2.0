@@ -177,6 +177,7 @@ namespace El_Unico_Grupo3
             btnProductos.Text = "Productos";
             btnProductos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             btnProductos.UseVisualStyleBackColor = false;
+            btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // btnUsuarios
             // 

@@ -19,7 +19,7 @@ namespace El_Unico_Grupo3
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            
         }
 
         private void btnCerrarAdmin_Click(object sender, EventArgs e)
@@ -66,6 +66,11 @@ namespace El_Unico_Grupo3
             this.pnContenedor.Tag = fh;
             fh.Show();
 
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            this.AbrirFormEnPanel(new interfazProductos());
         }
     }
 }
