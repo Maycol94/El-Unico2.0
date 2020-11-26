@@ -195,8 +195,7 @@ namespace El_Unico_Grupo3
 
         private void btnActualizarProducto_Click(object sender, EventArgs e)
         {
-            ActualizarProducto = "update tab_producto set Codigo_Producto ='" + txtCodigoProducto.Text +  "',Nombre_Producto='" + txtIngresarNuevoProducto.Text +
-                                 "',CostoUnitario_Producto='"+ txtCostoUnitarioProducto.Text +"'where Id_Producto='" + txtIdProducto.Text + "';";
+            ActualizarProducto = "update tab_producto set Codigo_Producto ='" + txtCodigoProducto.Text +  "',Nombre_Producto='" + txtIngresarNuevoProducto.Text +  "',CostoUnitario_Producto='"+ txtCostoUnitarioProducto.Text +"'where Id_Producto='" + txtIdProducto.Text + "';";
   
 
             DialogResult opcion; // declarando una variable de tipo  DialogResult
@@ -212,7 +211,7 @@ namespace El_Unico_Grupo3
                        MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dGVListadoProductos.DataSource = ConexionBase.LlenarGrid("SELECT  pr.Id_Producto,pr.Codigo_Producto , pr.Nombre_Producto," +
                                                                              "pr.CostoUnitario_Producto,p.Nombre_Proveedor FROM Tab_Producto" +
-                                                                             "pr Inner join Tab_Proveedor p on p.Id_Proveedor = pr.FK_Proveedor_Producto ");
+                                                                             " pr Inner join Tab_Proveedor p on p.Id_Proveedor = pr.FK_Proveedor_Producto ");
                     txtCodigoProducto.Clear();
                     txtCostoUnitarioProducto.Clear();
                     txtIngresarNuevoProducto.Clear();
