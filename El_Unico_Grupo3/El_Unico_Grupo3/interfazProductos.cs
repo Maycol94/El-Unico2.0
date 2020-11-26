@@ -38,9 +38,8 @@ namespace El_Unico_Grupo3
 
         private void btnAgregarProductos_Click(object sender, EventArgs e)
         {
-            
-            if (txtIngresarNuevoProducto.Text == string.Empty || txtCodigoProducto.Text==string.Empty
-               || txtCostoUnitarioProducto.Text==string.Empty || txtProveedorDeProducto.Text==string.Empty)// si el cuadro de texto es vacio
+
+            if (txtIngresarNuevoProducto.Text == string.Empty || txtCodigoProducto.Text == string.Empty || txtCostoUnitarioProducto.Text == string.Empty || txtProveedorDeProducto.Text == string.Empty)// si el cuadro de texto es vacio
             {
                 MessageBox.Show("Complete los campos solicitados para añadir un nuevo producto", "error",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -51,29 +50,34 @@ namespace El_Unico_Grupo3
                 try
                 {
                     Costo = double.Parse(txtCostoUnitarioProducto.Text);
-                    while (Costo<0)
+                    while (Costo < 0)
                     {
                         MessageBox.Show("Ingrese Costo Mayor a cero", "error",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                         txtCostoUnitarioProducto.Clear();
-                        Costo=double.Parse(txtCostoUnitarioProducto.Text);
+                        Costo = double.Parse(txtCostoUnitarioProducto.Text);
                     }
-                    Agregar = "INSERT INTO tab_producto(Codigo_Producto,Nombre_Producto,CostoUnitario_Producto,FK_Proveedor_Producto) " +
-                              "VALUES ('" + txtCodigoProducto.Text + "','" + txtIngresarNuevoProducto.Text + "','" + Costo + "','" + txtProveedorDeProducto.Text + "')";
+                    Agregar = "INSERT INTO tab_producto(Codigo_Producto,Nombre_Producto,CostoUnitario_Producto,FK_Proveedor_Producto) VALUES ('" + txtCodigoProducto.Text + "','" + txtIngresarNuevoProducto.Text + "','" + Costo + "','" + txtProveedorDeProducto.Text + "')";
 
                     if (ConexionBase.Insertar(Agregar))
                     {
                         MessageBox.Show("Exito al insertar producto", "Informacion",
-                           MessageBoxButtons.OK, MessageBoxIcon.Information);                    
-                        dGVListadoProductos.DataSource = ConexionBase.LlenarGrid("SELECT pr.Id_Producto ,pr.Codigo_Producto , pr.Nombre_Producto," +
-                                                                                 "pr.CostoUnitario_Producto,p.Nombre_Proveedor FROM Tab_Producto pr" +
-                                                                                 "Inner join Tab_Proveedor p on p.Id_Proveedor = pr.FK_Proveedor_Producto ");
+                           MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        dGVListadoProductos.DataSource = ConexionBase.LlenarGrid("SELECT pr.Id_Producto, pr.Codigo_Producto , pr.Nombre_Producto,pr.CostoUnitario_Producto,p.Nombre_Proveedor,p.Telefono_Proveedor FROM Tab_Producto pr Inner join Tab_Proveedor p on p.Id_Proveedor = pr.FK_Proveedor_Producto ");
+                        txtCodigoProducto.Clear();
+                        txtCostoUnitarioProducto.Clear();
+                        txtIngresarNuevoProducto.Clear();
+                        txtProveedorDeProducto.Clear();
+                        txtIdProducto.Clear();
                     }
                     else
                     {
                         MessageBox.Show("No se pudo insertar nada", "error",
                            MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+
+
+
                 }
                 catch
                 {
