@@ -113,29 +113,25 @@ namespace El_Unico_Grupo3
 
         private void btnBuscarProducto_Click(object sender, EventArgs e)
         {
-            //if (txtBuscarProducto.Text == string.Empty)
-            //{
-            //    MessageBox.Show("Ingresa el nombre del producto que deseas buscar", "error",
-            //                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-            //else
-            //{
-            //    try
-            //    {
+            if (txtBuscarProducto.Text == string.Empty)
+            {
+                MessageBox.Show("Ingresa el nombre del producto que deseas buscar", "error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                try
+                {
+                    BuscarCodigo = txtBuscarProducto.Text;
+                    dGVListadoProductos.DataSource = ConexionBase.LlenarGrid("SELECT pr.Id_Producto , pr.Codigo_Producto , pr.Nombre_Producto,pr.CostoUnitario_Producto,p.Nombre_Proveedor,p.Telefono_Proveedor FROM Tab_Producto pr Inner join Tab_Proveedor p on p.Id_Proveedor = pr.FK_Proveedor_Producto Where pr.Nombre_Producto =  '" + BuscarCodigo + "'");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("no se pudo hacer la consulta", "error",
+                             MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            //        BuscarCodigo = txtBuscarProducto.Text;
-
-            //        dGVListadoProductos.DataSource = ConexionBase.LlenarGrid("SELECT pr.Id_Producto ,pr.Codigo_Producto , pr.Nombre_Producto,pr.CostoUnitario_Producto,p.Nombre_Proveedor," +
-            //                                                                 "p.Telefono_Proveedor FROM Tab_Producto pr Inner join Tab_Proveedor p on p.Id_Proveedor = pr.FK_Proveedor_Producto" +
-            //                                                                 " Where pr.Nombre_producto =  " + BuscarCodigo );
-            //    }
-            //    catch
-            //    {
-            //        MessageBox.Show("no se pudo hacer la consulta", "error",
-            //                 MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            //    }
-            //}
+                }
+            }
         }
 
         private void btnVolveraMostrarTodosLosRegistros_Click(object sender, EventArgs e)
