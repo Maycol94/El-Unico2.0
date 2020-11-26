@@ -100,6 +100,7 @@ namespace El_Unico_Grupo3
 
             conexion.Open();
             cmd = new MySqlCommand(consulta, conexion);
+            
             rows = cmd.ExecuteNonQuery();
 
             if (rows > 0)
@@ -162,5 +163,7 @@ namespace El_Unico_Grupo3
             conexion.Close();
             return encontrado;
         }
+
+       
     }
 }
