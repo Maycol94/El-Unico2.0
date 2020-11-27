@@ -135,5 +135,11 @@ namespace El_Unico_Grupo3
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Gracias Pase un Felíz Dia :)");
+            Application.Exit();
+        }
     }
 }
