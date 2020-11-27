@@ -38,6 +38,7 @@ namespace El_Unico_Grupo3
             System.Windows.Forms.Button btnUsuarios;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicioAdmin));
             this.pnTitulo = new System.Windows.Forms.Panel();
+            this.lblTipoUsuarioCapturado = new System.Windows.Forms.Label();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnExpandir = new System.Windows.Forms.PictureBox();
@@ -201,6 +202,7 @@ namespace El_Unico_Grupo3
             // pnTitulo
             // 
             this.pnTitulo.BackColor = System.Drawing.Color.Maroon;
+            this.pnTitulo.Controls.Add(this.lblTipoUsuarioCapturado);
             this.pnTitulo.Controls.Add(this.btnMaximizar);
             this.pnTitulo.Controls.Add(this.btnMinimizar);
             this.pnTitulo.Controls.Add(this.btnExpandir);
@@ -210,6 +212,17 @@ namespace El_Unico_Grupo3
             this.pnTitulo.Name = "pnTitulo";
             this.pnTitulo.Size = new System.Drawing.Size(1333, 35);
             this.pnTitulo.TabIndex = 1;
+            // 
+            // lblTipoUsuarioCapturado
+            // 
+            this.lblTipoUsuarioCapturado.AutoSize = true;
+            this.lblTipoUsuarioCapturado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoUsuarioCapturado.ForeColor = System.Drawing.Color.White;
+            this.lblTipoUsuarioCapturado.Location = new System.Drawing.Point(12, 9);
+            this.lblTipoUsuarioCapturado.Name = "lblTipoUsuarioCapturado";
+            this.lblTipoUsuarioCapturado.Size = new System.Drawing.Size(97, 19);
+            this.lblTipoUsuarioCapturado.TabIndex = 5;
+            this.lblTipoUsuarioCapturado.Text = "TipoUsuario";
             // 
             // btnMaximizar
             // 
@@ -379,7 +392,9 @@ namespace El_Unico_Grupo3
             this.Name = "InicioAdmin";
             this.Opacity = 0.9D;
             this.Text = "RegistroCliente";
+            this.Load += new System.EventHandler(this.InicioAdmin_Load);
             this.pnTitulo.ResumeLayout(false);
+            this.pnTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExpandir)).EndInit();
@@ -407,5 +422,6 @@ namespace El_Unico_Grupo3
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblTipoUsuarioCapturado;
     }
 }

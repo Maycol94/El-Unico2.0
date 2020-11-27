@@ -67,6 +67,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConexionDataBase.cs" />
+    <Compile Include="FrmPerfilEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPerfilEmpleados.Designer.cs">
+      <DependentUpon>FrmPerfilEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     <Compile Include="RegistroFactura.Designer.cs">
       <DependentUpon>RegistroFactura.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmPerfilEmpleados.resx">
+      <DependentUpon>FrmPerfilEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

@@ -13,7 +13,7 @@ namespace El_Unico_Grupo3
         MySqlConnection conexion = new MySqlConnection("datasource=127.0.0.1;port=3306;username=root;password=umanzor;database=el_unico;Sslmode = none;");
         private MySqlCommand cmd;
         private MySqlDataReader verificar;
-      //  private MySqlCommandBuilder cmBuilder;
+        //  private MySqlCommandBuilder cmBuilder;
         private MySqlDataAdapter da;
         //private DataSet ds;
         private DataTable dt;
@@ -100,7 +100,7 @@ namespace El_Unico_Grupo3
 
             conexion.Open();
             cmd = new MySqlCommand(consulta, conexion);
-            
+
             rows = cmd.ExecuteNonQuery();
 
             if (rows > 0)
@@ -156,12 +156,29 @@ namespace El_Unico_Grupo3
             verificar = cmd.ExecuteReader();
             string encontrado = "";
 
-            if(verificar.Read())
+            if (verificar.Read())
             {
                 encontrado = Convert.ToString(verificar["Tipo_Usuario"]);
             }
             conexion.Close();
             return encontrado;
         }
+
+        public string PrecioVenta(string consulta)
+        {
+            conexion.Open();
+            cmd = new MySqlCommand(consulta, conexion);
+            verificar = cmd.ExecuteReader();
+            string encontrado = "";
+
+            if (verificar.Read())
+            {
+                encontrado = Convert.ToString(verificar["PrecioVentaUnitario_Inventario"]);
+            }
+            conexion.Close();
+            return encontrado;
+        }
+
+    
     }
 }

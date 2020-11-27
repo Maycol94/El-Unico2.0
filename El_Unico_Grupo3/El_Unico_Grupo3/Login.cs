@@ -15,6 +15,8 @@ namespace El_Unico_Grupo3
     public partial class frmElUnico : Form
     {
         ConexionDataBase conexionDB = new ConexionDataBase();
+        public string TipoUsuario;
+
         public frmElUnico()
         {
             InitializeComponent();
@@ -37,6 +39,7 @@ namespace El_Unico_Grupo3
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             InicioAdmin Admin = new InicioAdmin();
+            FrmUsuarios usuarios = new FrmUsuarios();
             frmRegistroClientes Empleado = new frmRegistroClientes();
             if (EstaValidado())
             {
@@ -45,20 +48,22 @@ namespace El_Unico_Grupo3
                 {
                     MessageBox.Show("Bienvenido");  
 
-                    string TipoUsuario;
                     TipoUsuario = "SELECT Tipo_Usuario FROM tab_usuario WHERE Nombre_Usuario='" + txtUsuario.Text + "' AND Contrasena_Usuario='" + txtContraseña.Text + "'";
                     MessageBox.Show(conexionDB.TipoUsuario(TipoUsuario));
-                    if (conexionDB.TipoUsuario(TipoUsuario).ToString() == "Administrador")
-                    {
-                        this.Hide();
+                    //if (conexionDB.TipoUsuario(TipoUsuario).ToString() == "Administrador")
+                    //{
+                        Admin.TipoUSuario = conexionDB.TipoUsuario(TipoUsuario).ToString();
+                        usuarios.CapturarTipoUsuario = conexionDB.TipoUsuario(TipoUsuario).ToString();
+                        
+                    this.Hide();
                         Admin.Show();
-                    }
+                    //}
 
-                    else
-                    {
-                        this.Hide();
-                        Empleado.Show();
-                    }
+                    //else
+                    //{
+                    //    this.Hide();
+                    //    Empleado.Show();
+                    //}
                 }
                 else
                 {
