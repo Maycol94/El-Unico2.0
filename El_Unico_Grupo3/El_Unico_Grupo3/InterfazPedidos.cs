@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace El_Unico_Grupo3
 {
-    public partial class Form2 : Form
+    public partial class InterfazPedidos : Form
     {
-        public Form2()
+        public InterfazPedidos()
         {
             InitializeComponent();
         }
 
         private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
