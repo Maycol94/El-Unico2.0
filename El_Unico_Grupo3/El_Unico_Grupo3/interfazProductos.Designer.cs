@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dGVListadoProductos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnVolveraMostrarTodosLosRegistros = new System.Windows.Forms.Button();
             this.btnBuscarProducto = new System.Windows.Forms.Button();
             this.txtBuscarProducto = new System.Windows.Forms.TextBox();
             this.btnELiminarProducto = new System.Windows.Forms.Button();
@@ -38,6 +41,7 @@
             this.btnActualizarProducto = new System.Windows.Forms.Button();
             this.btnAgregarProductos = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtIdProducto = new System.Windows.Forms.TextBox();
             this.txtProveedorDeProducto = new System.Windows.Forms.TextBox();
             this.txtCostoUnitarioProducto = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -64,14 +68,38 @@
             // 
             // dGVListadoProductos
             // 
+            this.dGVListadoProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dGVListadoProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dGVListadoProductos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.dGVListadoProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dGVListadoProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGVListadoProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dGVListadoProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVListadoProductos.EnableHeadersVisualStyles = false;
             this.dGVListadoProductos.Location = new System.Drawing.Point(0, 64);
             this.dGVListadoProductos.Name = "dGVListadoProductos";
+            this.dGVListadoProductos.RowHeadersVisible = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dGVListadoProductos.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dGVListadoProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dGVListadoProductos.Size = new System.Drawing.Size(384, 185);
             this.dGVListadoProductos.TabIndex = 1;
+            this.dGVListadoProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVListadoProductos_CellContentClick);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnVolveraMostrarTodosLosRegistros);
             this.groupBox1.Controls.Add(this.btnBuscarProducto);
             this.groupBox1.Controls.Add(this.txtBuscarProducto);
             this.groupBox1.Controls.Add(this.dGVListadoProductos);
@@ -84,19 +112,32 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Productos actuales";
             // 
+            // btnVolveraMostrarTodosLosRegistros
+            // 
+            this.btnVolveraMostrarTodosLosRegistros.ForeColor = System.Drawing.Color.Black;
+            this.btnVolveraMostrarTodosLosRegistros.Location = new System.Drawing.Point(309, 41);
+            this.btnVolveraMostrarTodosLosRegistros.Name = "btnVolveraMostrarTodosLosRegistros";
+            this.btnVolveraMostrarTodosLosRegistros.Size = new System.Drawing.Size(75, 21);
+            this.btnVolveraMostrarTodosLosRegistros.TabIndex = 8;
+            this.btnVolveraMostrarTodosLosRegistros.Text = "Mostrar todo";
+            this.btnVolveraMostrarTodosLosRegistros.UseVisualStyleBackColor = true;
+            this.btnVolveraMostrarTodosLosRegistros.Click += new System.EventHandler(this.btnVolveraMostrarTodosLosRegistros_Click);
+            // 
             // btnBuscarProducto
             // 
             this.btnBuscarProducto.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscarProducto.Location = new System.Drawing.Point(315, 24);
+            this.btnBuscarProducto.Location = new System.Drawing.Point(309, 14);
             this.btnBuscarProducto.Name = "btnBuscarProducto";
-            this.btnBuscarProducto.Size = new System.Drawing.Size(69, 21);
+            this.btnBuscarProducto.Size = new System.Drawing.Size(75, 20);
             this.btnBuscarProducto.TabIndex = 3;
             this.btnBuscarProducto.Text = "Buscar";
             this.btnBuscarProducto.UseVisualStyleBackColor = true;
+            this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
             // 
             // txtBuscarProducto
             // 
-            this.txtBuscarProducto.Location = new System.Drawing.Point(134, 25);
+            this.txtBuscarProducto.Location = new System.Drawing.Point(131, 14);
+            this.txtBuscarProducto.Multiline = true;
             this.txtBuscarProducto.Name = "txtBuscarProducto";
             this.txtBuscarProducto.Size = new System.Drawing.Size(172, 20);
             this.txtBuscarProducto.TabIndex = 2;
@@ -110,6 +151,7 @@
             this.btnELiminarProducto.TabIndex = 4;
             this.btnELiminarProducto.Text = "Eliminar Producto";
             this.btnELiminarProducto.UseVisualStyleBackColor = true;
+            this.btnELiminarProducto.Click += new System.EventHandler(this.btnELiminarProducto_Click);
             // 
             // btnSalir
             // 
@@ -131,6 +173,7 @@
             this.btnActualizarProducto.TabIndex = 5;
             this.btnActualizarProducto.Text = "Actualizar Producto";
             this.btnActualizarProducto.UseVisualStyleBackColor = true;
+            this.btnActualizarProducto.Click += new System.EventHandler(this.btnActualizarProducto_Click);
             // 
             // btnAgregarProductos
             // 
@@ -145,6 +188,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txtIdProducto);
             this.groupBox3.Controls.Add(this.btnSalir);
             this.groupBox3.Controls.Add(this.btnActualizarProducto);
             this.groupBox3.Controls.Add(this.txtProveedorDeProducto);
@@ -164,6 +208,13 @@
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Agregar nuevo producto";
+            // 
+            // txtIdProducto
+            // 
+            this.txtIdProducto.Location = new System.Drawing.Point(104, 14);
+            this.txtIdProducto.Name = "txtIdProducto";
+            this.txtIdProducto.Size = new System.Drawing.Size(136, 20);
+            this.txtIdProducto.TabIndex = 11;
             // 
             // txtProveedorDeProducto
             // 
@@ -273,5 +324,7 @@
         private System.Windows.Forms.TextBox txtCodigoProducto;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnVolveraMostrarTodosLosRegistros;
+        private System.Windows.Forms.TextBox txtIdProducto;
     }
 }
