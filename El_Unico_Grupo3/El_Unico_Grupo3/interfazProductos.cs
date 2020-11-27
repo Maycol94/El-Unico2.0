@@ -147,16 +147,18 @@ namespace El_Unico_Grupo3
 
         private void dGVListadoProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex>=0)
-            {
-                DataGridViewRow row = this.dGVListadoProductos.Rows[e.RowIndex];            
-                txtIdProducto.Text = row.Cells["Id_Producto"].Value.ToString();
-                txtCodigoProducto.Text = row.Cells["Codigo_Producto"].Value.ToString();
-                txtIngresarNuevoProducto.Text = row.Cells["Nombre_Producto"].Value.ToString();
-                txtCostoUnitarioProducto.Text = row.Cells["CostoUnitario_Producto"].Value.ToString();
-                txtProveedorDeProducto.Text = row.Cells["Nombre_Proveedor"].Value.ToString();
-                btnELiminarProducto.Enabled = true;
-            }
+           
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow row = this.dGVListadoProductos.Rows[e.RowIndex];
+                    txtIdProducto.Text = row.Cells["Id_Producto"].Value.ToString();
+                    txtCodigoProducto.Text = row.Cells["Codigo_Producto"].Value.ToString();
+                    txtIngresarNuevoProducto.Text = row.Cells["Nombre_Producto"].Value.ToString();
+                    txtCostoUnitarioProducto.Text = row.Cells["CostoUnitario_Producto"].Value.ToString();
+                    txtProveedorDeProducto.Text = row.Cells["Nombre_Proveedor"].Value.ToString();
+                    btnELiminarProducto.Enabled = true;
+                }
+           
        
             
         }
