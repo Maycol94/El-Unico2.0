@@ -93,7 +93,7 @@ namespace El_Unico_Grupo3
 
         private void cbbProductos_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+            
         }
 
         private void cbbProductos_SelectedIndexChanged_1(object sender, EventArgs e)

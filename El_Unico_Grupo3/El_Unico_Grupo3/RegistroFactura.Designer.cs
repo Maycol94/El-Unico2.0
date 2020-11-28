@@ -139,6 +139,7 @@ namespace El_Unico_Grupo3
             this.gbRegistroVentas.TabIndex = 8;
             this.gbRegistroVentas.TabStop = false;
             this.gbRegistroVentas.Text = "Registrar Venta";
+            this.gbRegistroVentas.Enter += new System.EventHandler(this.gbRegistroVentas_Enter);
             // 
             // btnLimpiar
             // 
