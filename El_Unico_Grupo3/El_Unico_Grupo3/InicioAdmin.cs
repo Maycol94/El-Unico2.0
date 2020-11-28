@@ -20,7 +20,11 @@ namespace El_Unico_Grupo3
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            
+            if (this.pnContenedor.Controls.Count > 0)
+                this.pnContenedor.Controls.RemoveAt(0);
+            RegistroCliente cliente = new RegistroCliente();
+            cliente.CapturarTipoUsuario = lblTipoUsuarioCapturado.Text;
+            AbrirFormulario(cliente);
         }
 
         private void btnCerrarAdmin_Click(object sender, EventArgs e)
