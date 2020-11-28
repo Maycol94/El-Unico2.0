@@ -155,8 +155,7 @@ namespace El_Unico_Grupo3
 
         private void btnElimar_Click(object sender, EventArgs e)
         {
-            if (CapturarTipoUsuario == "Administrador")
-            {
+            
                 Consulta = "Delete from tab_usuario where Id_Usuario=" + txtIdUsuario.Text;
                 if (conexionDB.Eliminar(Consulta))
                 {
@@ -178,11 +177,7 @@ namespace El_Unico_Grupo3
                     cbxTipoUsuario.SelectedItem = null;
                     txtUsuario.Focus();
                 }
-            }
-            else
-            {
-                MessageBox.Show("No tinene permiso de administrador");
-            }
+            
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

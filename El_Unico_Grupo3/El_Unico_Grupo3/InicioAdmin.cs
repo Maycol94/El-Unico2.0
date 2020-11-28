@@ -58,6 +58,8 @@ namespace El_Unico_Grupo3
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
+            if (this.pnContenedor.Controls.Count > 0)
+                this.pnContenedor.Controls.RemoveAt(0);
             FrmUsuarios usuario = new FrmUsuarios();
             usuario.CapturarTipoUsuario = lblTipoUsuarioCapturado.Text;
             AbrirFormulario(usuario);
@@ -84,7 +86,10 @@ namespace El_Unico_Grupo3
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
-            this.AbrirFormEnPanel(new interfazProductos());
+            if (this.pnContenedor.Controls.Count > 0)
+                this.pnContenedor.Controls.RemoveAt(0);
+            interfazProductos productos = new interfazProductos();
+            AbrirFormulario(productos);
         }
 
         private void InicioAdmin_Load(object sender, EventArgs e)
