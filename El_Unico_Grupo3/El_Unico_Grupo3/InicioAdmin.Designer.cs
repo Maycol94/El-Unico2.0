@@ -33,7 +33,7 @@ namespace El_Unico_Grupo3
             System.Windows.Forms.Button btnClientes;
             System.Windows.Forms.Button btnPedidos;
             System.Windows.Forms.Button btnProveedor;
-            System.Windows.Forms.Button btnCarrito;
+            System.Windows.Forms.Button btnFactura;
             System.Windows.Forms.Button btnProductos;
             System.Windows.Forms.Button btnUsuarios;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicioAdmin));
@@ -57,7 +57,7 @@ namespace El_Unico_Grupo3
             btnClientes = new System.Windows.Forms.Button();
             btnPedidos = new System.Windows.Forms.Button();
             btnProveedor = new System.Windows.Forms.Button();
-            btnCarrito = new System.Windows.Forms.Button();
+            btnFactura = new System.Windows.Forms.Button();
             btnProductos = new System.Windows.Forms.Button();
             btnUsuarios = new System.Windows.Forms.Button();
             this.pnTitulo.SuspendLayout();
@@ -143,23 +143,24 @@ namespace El_Unico_Grupo3
             btnProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             btnProveedor.UseVisualStyleBackColor = false;
             // 
-            // btnCarrito
+            // btnFactura
             // 
-            btnCarrito.BackColor = System.Drawing.Color.Maroon;
-            btnCarrito.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnCarrito.FlatAppearance.BorderSize = 0;
-            btnCarrito.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            btnCarrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnCarrito.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            btnCarrito.ForeColor = System.Drawing.Color.White;
-            btnCarrito.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnCarrito.Location = new System.Drawing.Point(12, 345);
-            btnCarrito.Name = "btnCarrito";
-            btnCarrito.Size = new System.Drawing.Size(175, 40);
-            btnCarrito.TabIndex = 4;
-            btnCarrito.Text = "Carrito";
-            btnCarrito.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            btnCarrito.UseVisualStyleBackColor = false;
+            btnFactura.BackColor = System.Drawing.Color.Maroon;
+            btnFactura.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnFactura.FlatAppearance.BorderSize = 0;
+            btnFactura.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            btnFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnFactura.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnFactura.ForeColor = System.Drawing.Color.White;
+            btnFactura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnFactura.Location = new System.Drawing.Point(12, 345);
+            btnFactura.Name = "btnFactura";
+            btnFactura.Size = new System.Drawing.Size(175, 40);
+            btnFactura.TabIndex = 4;
+            btnFactura.Text = "Factura";
+            btnFactura.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnFactura.UseVisualStyleBackColor = false;
+            btnFactura.Click += new System.EventHandler(this.btnFactura_Click);
             // 
             // btnProductos
             // 
@@ -298,7 +299,7 @@ namespace El_Unico_Grupo3
             this.pnVertical.Controls.Add(btnPedidos);
             this.pnVertical.Controls.Add(btnProveedor);
             this.pnVertical.Controls.Add(this.panel3);
-            this.pnVertical.Controls.Add(btnCarrito);
+            this.pnVertical.Controls.Add(btnFactura);
             this.pnVertical.Controls.Add(this.panel2);
             this.pnVertical.Controls.Add(btnProductos);
             this.pnVertical.Controls.Add(this.panel1);

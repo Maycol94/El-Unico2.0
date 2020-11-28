@@ -96,5 +96,11 @@ namespace El_Unico_Grupo3
         {
             lblTipoUsuarioCapturado.Text = TipoUSuario;
         }
+
+        private void btnFactura_Click(object sender, EventArgs e)
+        {
+            RegistroFactura factura = new RegistroFactura();
+            factura.Show();
+        }
     }
 }
