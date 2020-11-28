@@ -29,6 +29,7 @@ namespace El_Unico_Grupo3
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroCliente));
             this.label7 = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
@@ -48,7 +49,15 @@ namespace El_Unico_Grupo3
             this.txtCoerro = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtBusquedaClienteID = new System.Windows.Forms.TextBox();
+            this.btnBuscarClienteID = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.lblCapturarUsuario = new System.Windows.Forms.Label();
+            this.txtIdCliente = new System.Windows.Forms.TextBox();
+            this.erroIcon = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erroIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -64,13 +73,14 @@ namespace El_Unico_Grupo3
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.BackColor = System.Drawing.Color.Green;
+            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnRegistrar.FlatAppearance.BorderSize = 0;
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(76, 549);
+            this.btnRegistrar.Location = new System.Drawing.Point(87, 529);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(98, 48);
+            this.btnRegistrar.Size = new System.Drawing.Size(117, 40);
             this.btnRegistrar.TabIndex = 13;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
@@ -78,13 +88,14 @@ namespace El_Unico_Grupo3
             // 
             // btnCerrar
             // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Maroon;
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(532, 549);
+            this.btnCerrar.Location = new System.Drawing.Point(87, 588);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(98, 48);
+            this.btnCerrar.Size = new System.Drawing.Size(117, 40);
             this.btnCerrar.TabIndex = 14;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
@@ -92,13 +103,14 @@ namespace El_Unico_Grupo3
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.Yellow;
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnLimpiar.FlatAppearance.BorderSize = 0;
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.ForeColor = System.Drawing.Color.Black;
-            this.btnLimpiar.Location = new System.Drawing.Point(318, 549);
+            this.btnLimpiar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiar.Location = new System.Drawing.Point(210, 529);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(98, 48);
+            this.btnLimpiar.Size = new System.Drawing.Size(117, 40);
             this.btnLimpiar.TabIndex = 15;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -228,12 +240,89 @@ namespace El_Unico_Grupo3
             this.txtDireccion.Size = new System.Drawing.Size(273, 95);
             this.txtDireccion.TabIndex = 11;
             // 
+            // txtBusquedaClienteID
+            // 
+            this.txtBusquedaClienteID.Location = new System.Drawing.Point(433, 431);
+            this.txtBusquedaClienteID.Name = "txtBusquedaClienteID";
+            this.txtBusquedaClienteID.Size = new System.Drawing.Size(110, 26);
+            this.txtBusquedaClienteID.TabIndex = 18;
+            // 
+            // btnBuscarClienteID
+            // 
+            this.btnBuscarClienteID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnBuscarClienteID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarClienteID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarClienteID.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarClienteID.Location = new System.Drawing.Point(433, 463);
+            this.btnBuscarClienteID.Name = "btnBuscarClienteID";
+            this.btnBuscarClienteID.Size = new System.Drawing.Size(110, 50);
+            this.btnBuscarClienteID.TabIndex = 19;
+            this.btnBuscarClienteID.Text = "Buscar por ID";
+            this.btnBuscarClienteID.UseVisualStyleBackColor = false;
+            this.btnBuscarClienteID.Click += new System.EventHandler(this.btnBuscarClienteID_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(665, 463);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(110, 50);
+            this.btnEliminar.TabIndex = 19;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Visible = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar.Location = new System.Drawing.Point(549, 463);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(110, 50);
+            this.btnActualizar.TabIndex = 19;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // lblCapturarUsuario
+            // 
+            this.lblCapturarUsuario.AutoSize = true;
+            this.lblCapturarUsuario.Location = new System.Drawing.Point(610, 9);
+            this.lblCapturarUsuario.Name = "lblCapturarUsuario";
+            this.lblCapturarUsuario.Size = new System.Drawing.Size(61, 19);
+            this.lblCapturarUsuario.TabIndex = 20;
+            this.lblCapturarUsuario.Text = "Usuario";
+            this.lblCapturarUsuario.Visible = false;
+            // 
+            // txtIdCliente
+            // 
+            this.txtIdCliente.Location = new System.Drawing.Point(87, 52);
+            this.txtIdCliente.Name = "txtIdCliente";
+            this.txtIdCliente.Size = new System.Drawing.Size(100, 26);
+            this.txtIdCliente.TabIndex = 21;
+            // 
+            // erroIcon
+            // 
+            this.erroIcon.ContainerControl = this;
+            // 
             // RegistroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1172, 640);
+            this.Controls.Add(this.txtIdCliente);
+            this.Controls.Add(this.lblCapturarUsuario);
+            this.Controls.Add(this.btnActualizar);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnBuscarClienteID);
+            this.Controls.Add(this.txtBusquedaClienteID);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dgvRegistroClientes);
             this.Controls.Add(this.btnLimpiar);
@@ -261,6 +350,7 @@ namespace El_Unico_Grupo3
             this.Text = "PanelAdmin";
             this.Load += new System.EventHandler(this.RegistroCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erroIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,5 +375,12 @@ namespace El_Unico_Grupo3
         private System.Windows.Forms.TextBox txtCoerro;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.TextBox txtBusquedaClienteID;
+        private System.Windows.Forms.Button btnBuscarClienteID;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Label lblCapturarUsuario;
+        private System.Windows.Forms.TextBox txtIdCliente;
+        private System.Windows.Forms.ErrorProvider erroIcon;
     }
 }

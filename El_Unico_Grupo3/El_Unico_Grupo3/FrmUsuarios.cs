@@ -30,6 +30,7 @@ namespace El_Unico_Grupo3
 
             if (EstaValidado())
             {
+                errorIConRegistroUser.Clear();
                 usuario = txtUsuario.Text;
                 Contraseña = txtContraseña.Text;
                 TipoUsuario = cbxTipoUsuario.SelectedItem.ToString();
@@ -56,7 +57,7 @@ namespace El_Unico_Grupo3
                 errorIConRegistroUser.SetError(txtUsuario, "Ingrese su nombre de usuario");
                 NoError = false;
             }
-
+            
             if (txtContraseña.Text == string.Empty)
             {
                 errorIConRegistroUser.SetError(txtContraseña, "Debe ingresar su contraseña");
@@ -80,22 +81,75 @@ namespace El_Unico_Grupo3
             return NoError;
         }
 
+        private bool validarBusqueda()
+        {
+            bool NoError = true;
+            if (txtIdUsuarioBusqueda.Text == string.Empty)
+            {
+                errorIConRegistroUser.SetError(txtIdUsuarioBusqueda, "Ingrese id del usuario");
+                NoError = false;
+            }
+            return NoError;
+        }
+
         private void btnBuscarPorID_Click(object sender, EventArgs e)
         {
-            dgvUsuarios.DataSource = conexionDB.BuscarPorID("Select Id_Usuario, Nombre_Usuario, Tipo_Usuario from tab_usuario where Id_Usuario=" + txtIdUsuarioBusqueda.Text);
-            txtIdUsuario.Text = Convert.ToString(dgvUsuarios.CurrentRow.Cells[0].Value);
-            txtUsuario.Text = Convert.ToString(dgvUsuarios.CurrentRow.Cells[1].Value);
-            cbxTipoUsuario.SelectedItem = Convert.ToString(dgvUsuarios.CurrentRow.Cells[2].Value);
+            if (validarBusqueda())
+            {
+                errorIConRegistroUser.Clear();
+                dgvUsuarios.DataSource = conexionDB.BuscarPorID("Select Id_Usuario, Nombre_Usuario, Tipo_Usuario from tab_usuario where Id_Usuario=" + txtIdUsuarioBusqueda.Text);
+                txtIdUsuario.Text = Convert.ToString(dgvUsuarios.CurrentRow.Cells[0].Value);
+                txtUsuario.Text = Convert.ToString(dgvUsuarios.CurrentRow.Cells[1].Value);
+                cbxTipoUsuario.SelectedItem = Convert.ToString(dgvUsuarios.CurrentRow.Cells[2].Value);
+            
+            }
         }
 
         private void FrmUsuarios_Load(object sender, EventArgs e)
         {
-            //comboBox1.DataSource = conexionDB.LlenarGrid("Select * from tab_producto");
-            //comboBox1.DisplayMember = "Nombre_Producto";
-            //comboBox1.ValueMember = "Id_Producto";
-            //MessageBox.Show(CapturarTipoUsuario);
-            //dgvUsuarios.DataSource = conexionDB.LlenarGrid("Select * from tab_usuario");
-            //lblCapturaTipoUsuario.Text = CapturarTipoUsuario;
+            lblCapturaTipoUsuario.Text = CapturarTipoUsuario;
+            if (lblCapturaTipoUsuario.Text == "Administrador")
+            {
+
+                dgvUsuarios.Visible = true;
+                dgvUsuarios.DataSource = conexionDB.LlenarGrid("Select * from tab_usuario");
+                btnRegistrar.Visible = true;
+                btnElimar.Visible = true;
+                btnActualizar.Visible = true;
+                btnBuscarPorID.Visible = true;
+                btnCerrar.Visible = true;
+                txtIdUsuario.Visible = true;
+                txtUsuario.Visible = true;
+                txtContraseña.Visible = true;
+                txtConfirmarContraseña.Visible = true;
+                txtIdUsuarioBusqueda.Visible = true;
+                cbxTipoUsuario.Visible = true;
+                lblConfirmarContraseña.Visible = true;
+                lblContraseña.Visible = true;
+                lblIdBusquedaUsuario.Visible = true;
+                lblIdUsuario.Visible = true;
+                lblTipoUsuario.Visible = true;
+                lblUsuario.Visible = true;
+            }
+            else
+            {
+                dgvUsuarios.Visible = true;
+                btnActualizar.Visible = true;
+                btnBuscarPorID.Visible = true;
+                btnCerrar.Visible = true;
+                txtIdUsuario.Visible = true;
+                txtUsuario.Visible = true;
+                txtContraseña.Visible = true;
+                txtConfirmarContraseña.Visible = true;
+                txtIdUsuarioBusqueda.Visible = true;
+                cbxTipoUsuario.Visible = true;
+                lblConfirmarContraseña.Visible = true;
+                lblContraseña.Visible = true;
+                lblIdBusquedaUsuario.Visible = true;
+                lblIdUsuario.Visible = true;
+                lblTipoUsuario.Visible = true;
+                lblUsuario.Visible = true;
+            }
         }
 
         private void txtIdUsuario_TextChanged(object sender, EventArgs e)
@@ -127,6 +181,7 @@ namespace El_Unico_Grupo3
         {
             if (EstaValidado())
             {
+                errorIConRegistroUser.Clear();
                 Consulta = "Update tab_usuario SET Nombre_Usuario='" + txtUsuario.Text + "', Contrasena_Usuario='" + txtContraseña.Text + "', Tipo_Usuario='" + cbxTipoUsuario.SelectedItem.ToString() + "' where Id_Usuario=" + txtIdUsuario.Text;
                 if (conexionDB.Actualizar(Consulta))
                 {
@@ -191,55 +246,10 @@ namespace El_Unico_Grupo3
             //txtIdUsuarioBusqueda.Text = conexionDB.PrecioVenta(ObtenerPrecio);
         }
 
-        private void btnAdministrar_Click(object sender, EventArgs e)
-        {
-            lblCapturaTipoUsuario.Text = CapturarTipoUsuario ;
-            if (lblCapturaTipoUsuario.Text == "Administrador") 
-            {
-
-                dgvUsuarios.Visible = true;
-                dgvUsuarios.DataSource = conexionDB.LlenarGrid("Select * from tab_usuario");
-                btnRegistrar.Visible = true;
-                btnElimar.Visible = true;
-                btnActualizar.Visible = true;
-                btnBuscarPorID.Visible = true;
-                btnCerrar.Visible = true;
-                txtIdUsuario.Visible = true;
-                txtUsuario.Visible = true;
-                txtContraseña.Visible = true;
-                txtConfirmarContraseña.Visible = true;
-                txtIdUsuarioBusqueda.Visible = true;
-                cbxTipoUsuario.Visible = true;
-                lblConfirmarContraseña.Visible = true;
-                lblContraseña.Visible = true;
-                lblIdBusquedaUsuario.Visible = true;
-                lblIdUsuario.Visible = true;
-                lblTipoUsuario.Visible = true;
-                lblUsuario.Visible = true;
-            }
-            else 
-            {
-                dgvUsuarios.Visible = true;
-                btnActualizar.Visible = true;
-                btnBuscarPorID.Visible = true;
-                btnCerrar.Visible = true;
-                txtIdUsuario.Visible = true;
-                txtUsuario.Visible = true;
-                txtContraseña.Visible = true;
-                txtConfirmarContraseña.Visible = true;
-                txtIdUsuarioBusqueda.Visible = true;
-                cbxTipoUsuario.Visible = true;
-                lblConfirmarContraseña.Visible = true;
-                lblContraseña.Visible = true;
-                lblIdBusquedaUsuario.Visible = true;
-                lblIdUsuario.Visible = true;
-                lblTipoUsuario.Visible = true;
-                lblUsuario.Visible = true;
-            }
     }
        
     }
     
         
     
-}
+
