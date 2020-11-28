@@ -12,6 +12,7 @@ namespace El_Unico_Grupo3
 {
     public partial class InicioAdmin : Form
     {
+        public string TipoUSuario;
         public InicioAdmin()
         {
             InitializeComponent();
@@ -57,7 +58,9 @@ namespace El_Unico_Grupo3
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new FrmUsuarios());
+            FrmUsuarios usuario = new FrmUsuarios();
+            usuario.CapturarTipoUsuario = lblTipoUsuarioCapturado.Text;
+            AbrirFormulario(usuario);
         }
         private void AbrirFormEnPanel(object formhija)
         {
@@ -71,10 +74,22 @@ namespace El_Unico_Grupo3
             fh.Show();
 
         }
+        public void AbrirFormulario(Form Hijo)
+        {
+            Hijo.TopLevel = false;
+            pnContenedor.Controls.Add(Hijo);
+            Hijo.Dock = DockStyle.Fill;
+            Hijo.Show();
+        }
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
             this.AbrirFormEnPanel(new interfazProductos());
+        }
+
+        private void InicioAdmin_Load(object sender, EventArgs e)
+        {
+            lblTipoUsuarioCapturado.Text = TipoUSuario;
         }
     }
 }
