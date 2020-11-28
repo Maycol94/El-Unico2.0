@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dGVListadoProductos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -42,6 +42,7 @@
             this.btnActualizarProducto = new System.Windows.Forms.Button();
             this.btnAgregarProductos = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtIdProducto = new System.Windows.Forms.TextBox();
             this.txtProveedorDeProducto = new System.Windows.Forms.TextBox();
             this.txtCostoUnitarioProducto = new System.Windows.Forms.TextBox();
@@ -52,10 +53,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtIngresarNuevoProducto = new System.Windows.Forms.TextBox();
             this.ttMensajeAyuda = new System.Windows.Forms.ToolTip(this.components);
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblCapturarTipoUsuario = new System.Windows.Forms.Label();
+            this.errorICone = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dGVListadoProductos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorICone)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -76,27 +79,27 @@
             this.dGVListadoProductos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dGVListadoProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dGVListadoProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGVListadoProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGVListadoProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dGVListadoProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVListadoProductos.EnableHeadersVisualStyles = false;
-            this.dGVListadoProductos.Location = new System.Drawing.Point(0, 64);
+            this.dGVListadoProductos.Location = new System.Drawing.Point(6, 64);
             this.dGVListadoProductos.Name = "dGVListadoProductos";
             this.dGVListadoProductos.RowHeadersVisible = false;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            this.dGVListadoProductos.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dGVListadoProductos.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dGVListadoProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dGVListadoProductos.Size = new System.Drawing.Size(384, 185);
+            this.dGVListadoProductos.Size = new System.Drawing.Size(406, 179);
             this.dGVListadoProductos.TabIndex = 1;
             this.dGVListadoProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVListadoProductos_CellContentClick);
             // 
@@ -110,36 +113,40 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(23, 117);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(385, 249);
+            this.groupBox1.Size = new System.Drawing.Size(418, 249);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Productos actuales";
             // 
             // btnVolveraMostrarTodosLosRegistros
             // 
-            this.btnVolveraMostrarTodosLosRegistros.ForeColor = System.Drawing.Color.Black;
-            this.btnVolveraMostrarTodosLosRegistros.Location = new System.Drawing.Point(309, 41);
+            this.btnVolveraMostrarTodosLosRegistros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnVolveraMostrarTodosLosRegistros.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolveraMostrarTodosLosRegistros.ForeColor = System.Drawing.Color.White;
+            this.btnVolveraMostrarTodosLosRegistros.Location = new System.Drawing.Point(322, 14);
             this.btnVolveraMostrarTodosLosRegistros.Name = "btnVolveraMostrarTodosLosRegistros";
-            this.btnVolveraMostrarTodosLosRegistros.Size = new System.Drawing.Size(75, 21);
+            this.btnVolveraMostrarTodosLosRegistros.Size = new System.Drawing.Size(90, 27);
             this.btnVolveraMostrarTodosLosRegistros.TabIndex = 8;
             this.btnVolveraMostrarTodosLosRegistros.Text = "Mostrar todo";
-            this.btnVolveraMostrarTodosLosRegistros.UseVisualStyleBackColor = true;
+            this.btnVolveraMostrarTodosLosRegistros.UseVisualStyleBackColor = false;
             this.btnVolveraMostrarTodosLosRegistros.Click += new System.EventHandler(this.btnVolveraMostrarTodosLosRegistros_Click);
             // 
             // btnBuscarProducto
             // 
-            this.btnBuscarProducto.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscarProducto.Location = new System.Drawing.Point(309, 14);
+            this.btnBuscarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnBuscarProducto.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarProducto.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarProducto.Location = new System.Drawing.Point(6, 14);
             this.btnBuscarProducto.Name = "btnBuscarProducto";
-            this.btnBuscarProducto.Size = new System.Drawing.Size(75, 20);
+            this.btnBuscarProducto.Size = new System.Drawing.Size(77, 27);
             this.btnBuscarProducto.TabIndex = 3;
             this.btnBuscarProducto.Text = "Buscar";
-            this.btnBuscarProducto.UseVisualStyleBackColor = true;
+            this.btnBuscarProducto.UseVisualStyleBackColor = false;
             this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
             // 
             // txtBuscarProducto
             // 
-            this.txtBuscarProducto.Location = new System.Drawing.Point(131, 14);
+            this.txtBuscarProducto.Location = new System.Drawing.Point(89, 18);
             this.txtBuscarProducto.Multiline = true;
             this.txtBuscarProducto.Name = "txtBuscarProducto";
             this.txtBuscarProducto.Size = new System.Drawing.Size(172, 20);
@@ -147,46 +154,55 @@
             // 
             // btnELiminarProducto
             // 
-            this.btnELiminarProducto.ForeColor = System.Drawing.Color.Black;
+            this.btnELiminarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnELiminarProducto.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnELiminarProducto.ForeColor = System.Drawing.Color.White;
             this.btnELiminarProducto.Location = new System.Drawing.Point(124, 156);
             this.btnELiminarProducto.Name = "btnELiminarProducto";
             this.btnELiminarProducto.Size = new System.Drawing.Size(116, 29);
             this.btnELiminarProducto.TabIndex = 4;
             this.btnELiminarProducto.Text = "Eliminar Producto";
-            this.btnELiminarProducto.UseVisualStyleBackColor = true;
+            this.btnELiminarProducto.UseVisualStyleBackColor = false;
+            this.btnELiminarProducto.Visible = false;
             this.btnELiminarProducto.Click += new System.EventHandler(this.btnELiminarProducto_Click);
             // 
             // btnSalir
             // 
-            this.btnSalir.ForeColor = System.Drawing.Color.Black;
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
             this.btnSalir.Location = new System.Drawing.Point(124, 208);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(116, 29);
             this.btnSalir.TabIndex = 7;
             this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnActualizarProducto
             // 
-            this.btnActualizarProducto.ForeColor = System.Drawing.Color.Black;
+            this.btnActualizarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnActualizarProducto.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarProducto.ForeColor = System.Drawing.Color.White;
             this.btnActualizarProducto.Location = new System.Drawing.Point(6, 208);
             this.btnActualizarProducto.Name = "btnActualizarProducto";
             this.btnActualizarProducto.Size = new System.Drawing.Size(116, 29);
             this.btnActualizarProducto.TabIndex = 5;
             this.btnActualizarProducto.Text = "Actualizar Producto";
-            this.btnActualizarProducto.UseVisualStyleBackColor = true;
+            this.btnActualizarProducto.UseVisualStyleBackColor = false;
             this.btnActualizarProducto.Click += new System.EventHandler(this.btnActualizarProducto_Click);
             // 
             // btnAgregarProductos
             // 
-            this.btnAgregarProductos.ForeColor = System.Drawing.Color.Black;
+            this.btnAgregarProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnAgregarProductos.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarProductos.ForeColor = System.Drawing.Color.White;
             this.btnAgregarProductos.Location = new System.Drawing.Point(6, 156);
             this.btnAgregarProductos.Name = "btnAgregarProductos";
             this.btnAgregarProductos.Size = new System.Drawing.Size(116, 29);
             this.btnAgregarProductos.TabIndex = 6;
             this.btnAgregarProductos.Text = "Agregar Producto";
-            this.btnAgregarProductos.UseVisualStyleBackColor = true;
+            this.btnAgregarProductos.UseVisualStyleBackColor = false;
             this.btnAgregarProductos.Click += new System.EventHandler(this.btnAgregarProductos_Click);
             // 
             // groupBox3
@@ -206,12 +222,21 @@
             this.groupBox3.Controls.Add(this.txtIngresarNuevoProducto);
             this.groupBox3.Controls.Add(this.btnAgregarProductos);
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(433, 117);
+            this.groupBox3.Location = new System.Drawing.Point(451, 117);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(246, 249);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Agregar nuevo producto";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 21);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 13);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Id producto:";
             // 
             // txtIdProducto
             // 
@@ -289,14 +314,19 @@
             // 
             this.ttMensajeAyuda.IsBalloon = true;
             // 
-            // label6
+            // lblCapturarTipoUsuario
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 21);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 13);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Id producto:";
+            this.lblCapturarTipoUsuario.AutoSize = true;
+            this.lblCapturarTipoUsuario.Location = new System.Drawing.Point(624, 377);
+            this.lblCapturarTipoUsuario.Name = "lblCapturarTipoUsuario";
+            this.lblCapturarTipoUsuario.Size = new System.Drawing.Size(47, 13);
+            this.lblCapturarTipoUsuario.TabIndex = 8;
+            this.lblCapturarTipoUsuario.Text = "Capturar";
+            this.lblCapturarTipoUsuario.Visible = false;
+            // 
+            // errorICone
+            // 
+            this.errorICone.ContainerControl = this;
             // 
             // interfazProductos
             // 
@@ -304,6 +334,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(709, 399);
+            this.Controls.Add(this.lblCapturarTipoUsuario);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -316,6 +347,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorICone)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -345,5 +377,7 @@
         private System.Windows.Forms.TextBox txtIdProducto;
         private System.Windows.Forms.ToolTip ttMensajeAyuda;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblCapturarTipoUsuario;
+        private System.Windows.Forms.ErrorProvider errorICone;
     }
 }

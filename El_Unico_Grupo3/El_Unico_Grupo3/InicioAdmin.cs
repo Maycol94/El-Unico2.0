@@ -93,6 +93,7 @@ namespace El_Unico_Grupo3
             if (this.pnContenedor.Controls.Count > 0)
                 this.pnContenedor.Controls.RemoveAt(0);
             interfazProductos productos = new interfazProductos();
+            productos.CapturarTipoUsuario = lblTipoUsuarioCapturado.Text;
             AbrirFormulario(productos);
         }
 
