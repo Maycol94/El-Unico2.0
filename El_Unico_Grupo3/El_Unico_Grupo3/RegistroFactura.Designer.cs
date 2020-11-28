@@ -192,7 +192,7 @@ namespace El_Unico_Grupo3
             this.cbbProductos.Name = "cbbProductos";
             this.cbbProductos.Size = new System.Drawing.Size(347, 27);
             this.cbbProductos.TabIndex = 10;
-            this.cbbProductos.SelectedIndexChanged += new System.EventHandler(this.cbbProductos_SelectedIndexChanged);
+            this.cbbProductos.SelectedIndexChanged += new System.EventHandler(this.cbbProductos_SelectedIndexChanged_1);
             // 
             // txtCantidadVenta
             // 
