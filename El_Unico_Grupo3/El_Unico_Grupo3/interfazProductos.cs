@@ -10,9 +10,18 @@ using System.Windows.Forms;
 
 namespace El_Unico_Grupo3
 {
+    /// <summary>
+    /// ESTA INTERFAZ SE CREO POR OSCAR LEONEL SEGURA VALENCIA CARNET:SV20008 ESTUDIANTE DE LA UNIVERSIDAD DE EL SALVADOR.
+    /// ESTE PROGRAMA LLEVA EL CONTROL DE REGISTROS DE PRODUCTOS.
+    /// EL PROGRAMA REGISTRA NUEVOS PRODUCTOS, ELIMINA, ACTUALIZA Y BUSCA
+    /// </summary>
+    /// <remarks>
+    /// PARA REGISTRAR, ELIMINAR, ACTUALIZAR PRODUCTOS SE HA UTILIZADO LA CLASE ConexionDatabase, ES AHI DONDE ESTAN LOS METODOS
+    /// PARA REGISTRAR, ELIMINAR, ACTUALIZAR.
+    /// </remarks>
     public partial class interfazProductos : Form
     {
-
+        //CREACION DE VARIABLES PRIVATE
         private string Agregar;
         private double Costo;
         private string BuscarCodigo;
@@ -23,13 +32,18 @@ namespace El_Unico_Grupo3
 
         public interfazProductos()
         {
+            //AYUDA AL USUARIO CUANDO EL PUNTEO DEL MOUSE ESTA ENCIMA DE ALGUN TEXBOX O BUTTOM
             InitializeComponent();
+            this.ttMensajeAyuda.SetToolTip(this.txtBuscarProducto, "Busque por medio de el nombre prpoducto");
+            this.ttMensajeAyuda.SetToolTip(this.btnActualizarProducto, "Primero seleccione el registro que desea actualizar");
+            this.ttMensajeAyuda.SetToolTip(this.btnELiminarProducto, "Primero seleccione el registro que desea eliminar");
         }
 
         private void interfazProductos_Load(object sender, EventArgs e)
         {
+            //CARGAMOS POR DEFECTO EL DATAGRIEDVIEW CON LOS REGISTROS PRODUCTOS
             dGVListadoProductos.DataSource = ConexionBase.LlenarGrid("SELECT pr.Id_Producto , pr.Codigo_Producto , pr.Nombre_Producto," +
-                                                                     "pr.CostoUnitario_Producto,p.Nombre_Proveedor FROM Tab_Producto pr" +
+                                                                     "pr.CostoUnitario_Producto,p.Nombre_Proveedor,p.Telefono_Proveedor FROM Tab_Producto pr" +
                                                                      " Inner join Tab_Proveedor p on p.Id_Proveedor = pr.FK_Proveedor_Producto ");
             txtCodigoProducto.Focus();
             txtIdProducto.Enabled = false;
@@ -38,7 +52,7 @@ namespace El_Unico_Grupo3
 
         private void btnAgregarProductos_Click(object sender, EventArgs e)
         {
-
+            //AGREGAMOS NUEVOS REGISTROS(PRODUCTOS)
             if (txtIngresarNuevoProducto.Text == string.Empty || txtCodigoProducto.Text == string.Empty || txtCostoUnitarioProducto.Text == string.Empty || txtProveedorDeProducto.Text == string.Empty)// si el cuadro de texto es vacio
             {
                 MessageBox.Show("Complete los campos solicitados para añadir un nuevo producto", "error",
@@ -75,9 +89,6 @@ namespace El_Unico_Grupo3
                         MessageBox.Show("No se pudo insertar nada", "error",
                            MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-
-
-
                 }
                 catch
                 {
@@ -92,6 +103,7 @@ namespace El_Unico_Grupo3
 
         private void txtNumerosProveedor_KeyPress(object sender, KeyPressEventArgs e)
         {
+            //ESTE METODO VALIDA QUE EL USUSARIO SOLO PUEDA TENER COMO DATOS DE ENTRADA NUMEROS ENTEROS Y NO LETRAS
             if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
             {
                 MessageBox.Show("Solo se permiten numeros", "Advertencia",
@@ -117,6 +129,7 @@ namespace El_Unico_Grupo3
 
         private void btnBuscarProducto_Click(object sender, EventArgs e)
         {
+            //BUSCA POR NOMBRE DE PRODUCTOS
             if (txtBuscarProducto.Text == string.Empty)
             {
                 MessageBox.Show("Ingresa el nombre del producto que deseas buscar", "error",
@@ -141,13 +154,14 @@ namespace El_Unico_Grupo3
         private void btnVolveraMostrarTodosLosRegistros_Click(object sender, EventArgs e)
         {
             dGVListadoProductos.DataSource = ConexionBase.LlenarGrid("SELECT pr.Id_Producto ,pr.Codigo_Producto , pr.Nombre_Producto,pr.CostoUnitario_Producto," +
-                                                                     "p.Nombre_Proveedor FROM Tab_Producto pr Inner join Tab_Proveedor p on p.Id_Proveedor = pr.FK_Proveedor_Producto ");
+                                                                     "p.Nombre_Proveedor,p.Telefono_Proveedor FROM Tab_Producto pr Inner join Tab_Proveedor p on p.Id_Proveedor = pr.FK_Proveedor_Producto ");
             txtBuscarProducto.Clear();
         }
 
         private void dGVListadoProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+            //METODO QUE PARA LOS DATOS DEL DATAGRIEDVIEW A LOS TEXBOX CUANDO EL USUARIO DA CLICK EN UNOS DE
+            //ELLOS PARA LUEGO PROCEDER A ELIMINAR O ACTUALIZAR
                 if (e.RowIndex >= 0)
                 {
                     DataGridViewRow row = this.dGVListadoProductos.Rows[e.RowIndex];
@@ -157,14 +171,12 @@ namespace El_Unico_Grupo3
                     txtCostoUnitarioProducto.Text = row.Cells["CostoUnitario_Producto"].Value.ToString();
                     txtProveedorDeProducto.Text = row.Cells["Nombre_Proveedor"].Value.ToString();
                     btnELiminarProducto.Enabled = true;
-                }
-           
-       
-            
+                }                        
         }
 
         private void btnELiminarProducto_Click(object sender, EventArgs e)
         {
+            //ELIMINA REGISTROS
             EliminarRegistro = "delete from Tab_Producto where Id_Producto =" + txtIdProducto.Text;
             DialogResult opcion; // declarando una variable de tipo  DialogResult
             opcion = MessageBox.Show("Desea Eliminar definitivamente el registro?", "Eliminar",
@@ -178,7 +190,7 @@ namespace El_Unico_Grupo3
                     MessageBox.Show("Exito al eliminar producto", "Informacion",
                        MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dGVListadoProductos.DataSource = ConexionBase.LlenarGrid("SELECT  pr.Id_Producto,pr.Codigo_Producto , pr.Nombre_Producto," +
-                                                                             "pr.CostoUnitario_Producto,p.Nombre_Proveedor FROM Tab_Producto" +
+                                                                             "pr.CostoUnitario_Producto,p.Nombre_Proveedor,p.Telefono_Proveedor FROM Tab_Producto" +
                                                                              " pr Inner join Tab_Proveedor p on p.Id_Proveedor = pr.FK_Proveedor_Producto ");
                     txtCodigoProducto.Clear();
                     txtCostoUnitarioProducto.Clear();
@@ -197,6 +209,7 @@ namespace El_Unico_Grupo3
 
         private void btnActualizarProducto_Click(object sender, EventArgs e)
         {
+            //ACTUALIZA REGISTROS
             ActualizarProducto = "update tab_producto set Codigo_Producto ='" + txtCodigoProducto.Text +  "',Nombre_Producto='" + txtIngresarNuevoProducto.Text +  "',CostoUnitario_Producto='"+ txtCostoUnitarioProducto.Text +"'where Id_Producto='" + txtIdProducto.Text + "';";
   
 
@@ -212,7 +225,7 @@ namespace El_Unico_Grupo3
                     MessageBox.Show("Exito al actualizar el producto", "Informacion",
                        MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dGVListadoProductos.DataSource = ConexionBase.LlenarGrid("SELECT  pr.Id_Producto,pr.Codigo_Producto , pr.Nombre_Producto," +
-                                                                             "pr.CostoUnitario_Producto,p.Nombre_Proveedor FROM Tab_Producto" +
+                                                                             "pr.CostoUnitario_Producto,p.Nombre_Proveedor,p.Telefono_Proveedor FROM Tab_Producto" +
                                                                              " pr Inner join Tab_Proveedor p on p.Id_Proveedor = pr.FK_Proveedor_Producto ");
                     txtCodigoProducto.Clear();
                     txtCostoUnitarioProducto.Clear();
