@@ -21,12 +21,14 @@ namespace El_Unico_Grupo3
     /// </remarks>
     public partial class interfazProductos : Form
     {
+        
         //CREACION DE VARIABLES PRIVATE
         private string Agregar;
         private double Costo;
         private string BuscarCodigo;
         private string EliminarRegistro;
         private string ActualizarProducto;
+        public string CapturarTipoUsuario;
         ConexionDataBase ConexionBase = new ConexionDataBase();
         
 
@@ -41,6 +43,11 @@ namespace El_Unico_Grupo3
 
         private void interfazProductos_Load(object sender, EventArgs e)
         {
+            lblCapturarTipoUsuario.Text = CapturarTipoUsuario;
+            if(lblCapturarTipoUsuario.Text == "Administrador")
+            {
+                btnELiminarProducto.Visible = true;
+            }
             //CARGAMOS POR DEFECTO EL DATAGRIEDVIEW CON LOS REGISTROS PRODUCTOS
             dGVListadoProductos.DataSource = ConexionBase.LlenarGrid("SELECT pr.Id_Producto , pr.Codigo_Producto , pr.Nombre_Producto," +
                                                                      "pr.CostoUnitario_Producto,p.Nombre_Proveedor,p.Telefono_Proveedor FROM Tab_Producto pr" +
@@ -130,6 +137,7 @@ namespace El_Unico_Grupo3
         private void btnBuscarProducto_Click(object sender, EventArgs e)
         {
             //BUSCA POR NOMBRE DE PRODUCTOS
+            
             if (txtBuscarProducto.Text == string.Empty)
             {
                 MessageBox.Show("Ingresa el nombre del producto que deseas buscar", "error",
@@ -239,6 +247,42 @@ namespace El_Unico_Grupo3
                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private bool EstaValidado()
+        {
+            bool NoError = true;
+            if (txtCodigoProducto.Text == string.Empty)
+            {
+                errorICone.SetError(txtCodigoProducto, "Ingrese su nombre de usuario");
+                NoError = false;
+            }
+            if (txtIngresarNuevoProducto.Text == string.Empty)
+            {
+                errorICone.SetError(txtIngresarNuevoProducto, "Ingrese su nombre de usuario");
+                NoError = false;
+            }
+            if (txtCostoUnitarioProducto.Text == string.Empty)
+            {
+                errorICone.SetError(txtCostoUnitarioProducto, "Ingrese su nombre de usuario");
+                NoError = false;
+            }
+            if (txtProveedorDeProducto.Text == string.Empty)
+            {
+                errorICone.SetError(txtProveedorDeProducto, "Ingrese su nombre de usuario");
+                NoError = false;
+            }
+            return NoError;
+        }
+        private bool validarBusqueda()
+        {
+            bool NoError = true;
+            if (txtBuscarProducto.Text == string.Empty)
+            {
+                errorICone.SetError(txtBuscarProducto, "Ingrese su nombre de usuario");
+                NoError = false;
+            }
+            return NoError;
         }
     }
 }
