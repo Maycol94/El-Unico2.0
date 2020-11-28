@@ -10,7 +10,7 @@ namespace El_Unico_Grupo3
 {
     class ConexionDataBase
     {
-        MySqlConnection conexion = new MySqlConnection("datasource=127.0.0.1;port=3306;username=root;password=umanzor;database=el_unico;Sslmode = none;");
+        MySqlConnection conexion = new MySqlConnection("datasource=127.0.0.1;port=3306;username=root;password=;database=el_unico;Sslmode = none;");
         private MySqlCommand cmd;
         private MySqlDataReader verificar;
       //  private MySqlCommandBuilder cmBuilder;
