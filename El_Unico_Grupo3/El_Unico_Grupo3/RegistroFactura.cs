@@ -25,8 +25,12 @@ namespace El_Unico_Grupo3
         {
             //Fecha automatica
             lblFecha.Text = DateTime.Now.ToString("d");
-           
-          //  dgvProductoFacturado.DataSource = conexionDB.LlenarGrid("select * from tab_Ventas");
+            cbbProductos.DataSource = conexionDB.LlenarGrid("Select * from tab_usuario");
+            cbbProductos.DisplayMember = "Nombre_Usuario";
+            cbbProductos.ValueMember = "Id_Usuario";
+
+
+            //  dgvProductoFacturado.DataSource = conexionDB.LlenarGrid("select * from tab_Ventas");
 
         }
 
@@ -86,7 +90,12 @@ namespace El_Unico_Grupo3
 
         private void cbbProductos_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+            
+        }
+
+        private void gbRegistroVentas_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
