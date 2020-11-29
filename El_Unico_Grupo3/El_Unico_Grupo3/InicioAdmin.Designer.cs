@@ -124,6 +124,7 @@ namespace El_Unico_Grupo3
             btnPedidos.Text = "Pedidos";
             btnPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             btnPedidos.UseVisualStyleBackColor = false;
+            btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
             // 
             // btnProveedor
             // 
@@ -142,6 +143,7 @@ namespace El_Unico_Grupo3
             btnProveedor.Text = "Proveedor";
             btnProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             btnProveedor.UseVisualStyleBackColor = false;
+            btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
             // 
             // btnFactura
             // 
