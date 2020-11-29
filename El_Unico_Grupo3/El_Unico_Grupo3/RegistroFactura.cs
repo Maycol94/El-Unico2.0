@@ -25,12 +25,18 @@ namespace El_Unico_Grupo3
         {
             //Fecha automatica
             lblFecha.Text = DateTime.Now.ToString("d");
+            //Mostrar Producto
             cbbProductos.DataSource = conexionDB.LlenarGrid("Select * from tab_producto");
             cbbProductos.DisplayMember = "Nombre_Producto";
-           
+            cbbProductos.ValueMember = "Id_Producto";
+            //Mostrar Clientes
+            cbvClientesFactura.DataSource = conexionDB.LlenarGrid("Select * from tab_producto");
+            cbvClientesFactura.DisplayMember = "Nombre_Producto";
+            cbvClientesFactura.ValueMember = "Id_Producto";
 
-            
-          
+
+
+
 
             //  dgvProductoFacturado.DataSource = conexionDB.LlenarGrid("select * from tab_Ventas");
 
