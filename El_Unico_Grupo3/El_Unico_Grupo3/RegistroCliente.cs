@@ -115,31 +115,34 @@ namespace El_Unico_Grupo3
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            string Consulta = "Delete from tab_cliente where Id_Cliente=" + txtIdCliente.Text;
-            if (conectionDB.Eliminar(Consulta))
+            if (validarBusqueda())
             {
-                MessageBox.Show("Registro eliminado con exito", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dgvRegistroClientes.DataSource = conectionDB.LlenarGrid("Select * from tab_cliente");
-                txtIdCliente.Clear();
-                txtNombre.Clear();
-                txtApellido.Clear();
-                txtDui.Clear();
-                txtTel.Clear();
-                txtCoerro.Clear();
-                txtDireccion.Clear();
-                txtNombre.Focus();
-            }
-            else
-            {
-                MessageBox.Show("No se pudo eliminar el registro", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtIdCliente.Clear();
-                txtNombre.Clear();
-                txtApellido.Clear();
-                txtDui.Clear();
-                txtTel.Clear();
-                txtCoerro.Clear();
-                txtDireccion.Clear();
-                txtNombre.Focus();
+                string Consulta = "Delete from tab_cliente where Id_Cliente=" + txtIdCliente.Text;
+                if (conectionDB.Eliminar(Consulta))
+                {
+                    MessageBox.Show("Registro eliminado con exito", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgvRegistroClientes.DataSource = conectionDB.LlenarGrid("Select * from tab_cliente");
+                    txtIdCliente.Clear();
+                    txtNombre.Clear();
+                    txtApellido.Clear();
+                    txtDui.Clear();
+                    txtTel.Clear();
+                    txtCoerro.Clear();
+                    txtDireccion.Clear();
+                    txtNombre.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo eliminar el registro", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtIdCliente.Clear();
+                    txtNombre.Clear();
+                    txtApellido.Clear();
+                    txtDui.Clear();
+                    txtTel.Clear();
+                    txtCoerro.Clear();
+                    txtDireccion.Clear();
+                    txtNombre.Focus();
+                }
             }
         }
 

@@ -197,7 +197,7 @@ namespace El_Unico_Grupo3
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo eliminar el registro", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se pudo actualizar el registro", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtUsuario.Clear();
                     txtContraseña.Clear();
                     txtIdUsuario.Clear();
@@ -210,7 +210,8 @@ namespace El_Unico_Grupo3
 
         private void btnElimar_Click(object sender, EventArgs e)
         {
-            
+            if (validarBusqueda())
+            {
                 Consulta = "Delete from tab_usuario where Id_Usuario=" + txtIdUsuario.Text;
                 if (conexionDB.Eliminar(Consulta))
                 {
@@ -232,7 +233,7 @@ namespace El_Unico_Grupo3
                     cbxTipoUsuario.SelectedItem = null;
                     txtUsuario.Focus();
                 }
-            
+            }
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

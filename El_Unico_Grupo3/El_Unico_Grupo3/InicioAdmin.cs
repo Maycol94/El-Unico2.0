@@ -105,7 +105,13 @@ namespace El_Unico_Grupo3
         private void btnFactura_Click(object sender, EventArgs e)
         {
             RegistroFactura factura = new RegistroFactura();
-            factura.Show();
+            AbrirFormulario(factura);
+        }
+
+        private void btnProveedor_Click(object sender, EventArgs e)
+        {
+            RegistroProveedores proveedor = new RegistroProveedores();
+            AbrirFormulario(proveedor);
         }
     }
 }
