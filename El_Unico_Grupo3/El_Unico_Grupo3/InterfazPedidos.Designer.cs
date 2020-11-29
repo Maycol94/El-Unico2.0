@@ -40,9 +40,12 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dGVListadoProductos = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -55,10 +58,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dTPFechaPedido = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVListadoProductos)).BeginInit();
             this.SuspendLayout();
@@ -66,65 +66,72 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(278, 36);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(217, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(249, 24);
+            this.label1.Size = new System.Drawing.Size(395, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "REGISTRO DE PEDIDOS ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(28, 72);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(12, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 18);
+            this.label2.Size = new System.Drawing.Size(93, 19);
             this.label2.TabIndex = 1;
-            this.label2.Text = "IdPedidos:";
+            this.label2.Text = "Id Pedidos:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 106);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(38, 105);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 18);
+            this.label3.Size = new System.Drawing.Size(67, 19);
             this.label3.TabIndex = 2;
-            this.label3.Text = "IdCliente:";
+            this.label3.Text = "Cliente:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(28, 138);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(42, 137);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 18);
+            this.label4.Size = new System.Drawing.Size(63, 19);
             this.label4.TabIndex = 3;
             this.label4.Text = "Estado:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(571, 72);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(493, 71);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 18);
+            this.label5.Size = new System.Drawing.Size(121, 19);
             this.label5.TabIndex = 4;
-            this.label5.Text = "FechaPedido:";
+            this.label5.Text = "Fecha Pedido:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(571, 106);
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(523, 105);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 18);
+            this.label6.Size = new System.Drawing.Size(91, 19);
             this.label6.TabIndex = 5;
-            this.label6.Text = "IdVendedo:";
+            this.label6.Text = "Vendedor:";
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(111, 73);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
@@ -146,17 +153,10 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(678, 107);
+            this.textBox6.Location = new System.Drawing.Point(620, 107);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(85, 20);
             this.textBox6.TabIndex = 11;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(678, 72);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(85, 20);
-            this.textBox4.TabIndex = 12;
             // 
             // groupBox1
             // 
@@ -210,6 +210,30 @@
             this.dGVListadoProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dGVListadoProductos.Size = new System.Drawing.Size(652, 161);
             this.dGVListadoProductos.TabIndex = 11;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "IdProducto";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 101;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "nombre de Producto";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 148;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "PrecioProdcuto";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 128;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "CantidadProducto";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 150;
             // 
             // textBox9
             // 
@@ -319,29 +343,12 @@
             this.button3.Text = "Salir";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // Column1
+            // dTPFechaPedido
             // 
-            this.Column1.HeaderText = "IdProducto";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 101;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "nombre de Producto";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 148;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "PrecioProdcuto";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 128;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "CantidadProducto";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 150;
+            this.dTPFechaPedido.Location = new System.Drawing.Point(620, 71);
+            this.dTPFechaPedido.Name = "dTPFechaPedido";
+            this.dTPFechaPedido.Size = new System.Drawing.Size(200, 20);
+            this.dTPFechaPedido.TabIndex = 17;
             // 
             // InterfazPedidos
             // 
@@ -349,12 +356,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(832, 465);
+            this.Controls.Add(this.dTPFechaPedido);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAgregarProductos);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -365,6 +372,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InterfazPedidos";
             this.Text = "pedidos";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -388,7 +396,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox8;
@@ -407,5 +414,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DateTimePicker dTPFechaPedido;
     }
 }
