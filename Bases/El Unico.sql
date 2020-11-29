@@ -166,9 +166,6 @@ FK_Producto_Existencia int,
 constraint fk_Id_Producto_Existencia foreign key (FK_Producto_Existencia) references Tab_Producto(Id_Producto) on update cascade on delete cascade
 )Engine InnoDB;
 
--- mostrar --
-Select ex.Fecha_Existencia,ex.Cantidad_Existencia,ex.PrecioUnitario_Existencia,pr.Nombre_Producto from Tab_Existencia as ex inner join Tab_Producto as pr on pr.Id_Producto = ex.FK_Producto_Existencia;
-
 -- trigger ingreso a Existencias --
 
 create trigger trInsertar_existencias after insert on Tab_Inventario
@@ -212,9 +209,7 @@ create trigger trUpDate_existencias after insert on Tab_Venta
 for each row
 update Tab_Existencia as ex set ex.Fecha_Existencia = new.Fecha_venta, ex.Cantidad_Existencia =(Cantidad_Existencia - new.Cantidad_Venta)   where ex.FK_Producto_Existencia = new.FK_Producto_Venta;
 
-select * from tab_Venta;
-select v.Fecha_Venta,v.Cantidad_Venta,v.Total_Venta,Nombre_Producto from tab_Venta as v
-inner join tab_Producto as pr on pr.Id_producto = v.FK_Producto_Venta;
+
 
 
 -- Tabla Factura --
@@ -241,9 +236,7 @@ insert into Tab_Venta(Fecha_Venta,Cantidad_Venta,Total_Venta,FK_Producto_Venta) 
 
 
 -- insertar --
-insert into tab_Factura(Numero_Factura,Cantidad_Factura,total_Factura,Fecha_Factura,Fk_Cliente_Factura,FK_Producto_Factura,FK_Existencia_Factura) value(001,10,3.30,curdate(),1,1,1),(002,10,0.70,curdate(),2,2,2),
-(003,10,13.00,curdate(),3,3,3),(004,10,3.90,curdate(),4,4,4),(005,10,0.70,curdate(),5,5,5),(006,10,0.70,curdate(),6,6,6),
-(007,10,13.00,curdate(),7,7,7),(008,10,16.30,curdate(),8,8,8),(009,10,6.50,curdate(),9,9,9),(010,10,0.70,curdate(),10,10,10);
+insert into tab_Factura(Numero_Factura,Cantidad_Factura,total_Factura,Fecha_Factura,Fk_Cliente_Factura,FK_Producto_Factura,FK_Existencia_Factura) value(001,10,13.00,curdate(),1,3,3);
 
 -- Mostrar --
 Select f.Numero_Factura,Fecha_Factura,c.Nombre_Cliente,f.Cantidad_Factura,p.Nombre_Producto,ex.PrecioUnitario_Existencia,f.total_Factura from tab_Factura as f
