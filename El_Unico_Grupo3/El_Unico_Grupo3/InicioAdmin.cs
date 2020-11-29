@@ -108,5 +108,25 @@ namespace El_Unico_Grupo3
             fa.Show();
 
         }
+
+        private void btnPedidos_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new InterfazPedidos());
+        }
+
+        private void pnContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnProveedor_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new RegistroProveedores());
+        }
+
+        private void btnInventatio_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new frmInventario());
+        }
     }
 }

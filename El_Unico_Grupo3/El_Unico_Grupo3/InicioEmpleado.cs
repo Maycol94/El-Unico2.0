@@ -91,5 +91,10 @@ namespace El_Unico_Grupo3
         {
             AbrirFormEnPanel(new RegistroFactura());
         }
+
+        private void btnPedidos_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new InterfazPedidos());
+        }
     }
 }

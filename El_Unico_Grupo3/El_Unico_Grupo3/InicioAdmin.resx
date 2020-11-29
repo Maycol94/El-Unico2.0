@@ -819,6 +819,9 @@
         2AFWhvnYz5RW/fPf/j98abkt0sRKuAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="btnInventatio.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAPsAAAFACAYAAAB6CAqkAAAABGdBTUEAALGPC/xhBQAA/8dJREFUeF7s

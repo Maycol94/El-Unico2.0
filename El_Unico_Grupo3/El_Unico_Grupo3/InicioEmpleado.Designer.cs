@@ -159,6 +159,7 @@
             btnPedidos.Text = "Pedidos";
             btnPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             btnPedidos.UseVisualStyleBackColor = false;
+            btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
             // 
             // btnClientes
             // 
