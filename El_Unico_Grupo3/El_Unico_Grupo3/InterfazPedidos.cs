@@ -26,5 +26,10 @@ namespace El_Unico_Grupo3
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
