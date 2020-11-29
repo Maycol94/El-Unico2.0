@@ -39,6 +39,7 @@ namespace El_Unico_Grupo3
             // 
             this.dgbInventario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dgbInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgbInventario.GridColor = System.Drawing.Color.SteelBlue;
             this.dgbInventario.Location = new System.Drawing.Point(33, 105);
             this.dgbInventario.Name = "dgbInventario";
             this.dgbInventario.Size = new System.Drawing.Size(616, 312);
@@ -67,7 +68,7 @@ namespace El_Unico_Grupo3
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmInventario";
             this.Text = "Inventario";
             this.Load += new System.EventHandler(this.frmInventario_Load);

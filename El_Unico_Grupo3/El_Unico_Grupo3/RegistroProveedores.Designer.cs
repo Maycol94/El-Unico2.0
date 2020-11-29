@@ -79,6 +79,7 @@ namespace El_Unico_Grupo3
             this.btnCerrar.TabIndex = 27;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnElimar
             // 
