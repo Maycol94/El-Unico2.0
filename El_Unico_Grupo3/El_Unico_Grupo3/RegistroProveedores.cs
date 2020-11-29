@@ -165,5 +165,10 @@ namespace El_Unico_Grupo3
             }
             return NoError;
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

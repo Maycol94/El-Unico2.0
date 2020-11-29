@@ -142,6 +142,7 @@ namespace El_Unico_Grupo3
             btnProveedor.Text = "Proveedor";
             btnProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             btnProveedor.UseVisualStyleBackColor = false;
+            btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
             // 
             // btnFactura
             // 
