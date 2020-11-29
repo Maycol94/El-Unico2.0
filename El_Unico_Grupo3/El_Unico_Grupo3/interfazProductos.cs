@@ -247,42 +247,7 @@ namespace El_Unico_Grupo3
                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
-
-        private bool EstaValidado()
-        {
-            bool NoError = true;
-            if (txtCodigoProducto.Text == string.Empty)
-            {
-                errorICone.SetError(txtCodigoProducto, "Ingrese su nombre de usuario");
-                NoError = false;
-            }
-            if (txtIngresarNuevoProducto.Text == string.Empty)
-            {
-                errorICone.SetError(txtIngresarNuevoProducto, "Ingrese su nombre de usuario");
-                NoError = false;
-            }
-            if (txtCostoUnitarioProducto.Text == string.Empty)
-            {
-                errorICone.SetError(txtCostoUnitarioProducto, "Ingrese su nombre de usuario");
-                NoError = false;
-            }
-            if (txtProveedorDeProducto.Text == string.Empty)
-            {
-                errorICone.SetError(txtProveedorDeProducto, "Ingrese su nombre de usuario");
-                NoError = false;
-            }
-            return NoError;
-        }
-        private bool validarBusqueda()
-        {
-            bool NoError = true;
-            if (txtBuscarProducto.Text == string.Empty)
-            {
-                errorICone.SetError(txtBuscarProducto, "Ingrese su nombre de usuario");
-                NoError = false;
-            }
-            return NoError;
-        }
+        }        
     }
 }
+
