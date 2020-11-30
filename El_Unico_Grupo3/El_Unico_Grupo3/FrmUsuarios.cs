@@ -179,7 +179,7 @@ namespace El_Unico_Grupo3
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            if (EstaValidado())
+            if (validarBusqueda())
             {
                 errorIConRegistroUser.Clear();
                 Consulta = "Update tab_usuario SET Nombre_Usuario='" + txtUsuario.Text + "', Contrasena_Usuario='" + txtContraseña.Text + "', Tipo_Usuario='" + cbxTipoUsuario.SelectedItem.ToString() + "' where Id_Usuario=" + txtIdUsuario.Text;

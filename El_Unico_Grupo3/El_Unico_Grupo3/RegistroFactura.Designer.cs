@@ -60,10 +60,10 @@ namespace El_Unico_Grupo3
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 26F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(264, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(274, 40);
+            this.label1.Size = new System.Drawing.Size(286, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "Registro Factura";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -133,13 +133,12 @@ namespace El_Unico_Grupo3
             this.gbRegistroVentas.Controls.Add(this.label6);
             this.gbRegistroVentas.Controls.Add(this.label5);
             this.gbRegistroVentas.ForeColor = System.Drawing.Color.White;
-            this.gbRegistroVentas.Location = new System.Drawing.Point(111, 229);
+            this.gbRegistroVentas.Location = new System.Drawing.Point(111, 205);
             this.gbRegistroVentas.Name = "gbRegistroVentas";
             this.gbRegistroVentas.Size = new System.Drawing.Size(710, 213);
             this.gbRegistroVentas.TabIndex = 8;
             this.gbRegistroVentas.TabStop = false;
             this.gbRegistroVentas.Text = "Registrar Venta";
-         //   this.gbRegistroVentas.Enter += new System.EventHandler(this.gbRegistroVentas_Enter);
             // 
             // btnLimpiar
             // 
@@ -193,7 +192,6 @@ namespace El_Unico_Grupo3
             this.cbbProductos.Name = "cbbProductos";
             this.cbbProductos.Size = new System.Drawing.Size(347, 27);
             this.cbbProductos.TabIndex = 10;
-          //  this.cbbProductos.SelectedIndexChanged += new System.EventHandler(this.cbbProductos_SelectedIndexChanged_1);
             // 
             // txtCantidadVenta
             // 
@@ -223,7 +221,7 @@ namespace El_Unico_Grupo3
             // dgvProductoFacturado
             // 
             this.dgvProductoFacturado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductoFacturado.Location = new System.Drawing.Point(111, 494);
+            this.dgvProductoFacturado.Location = new System.Drawing.Point(111, 460);
             this.dgvProductoFacturado.Name = "dgvProductoFacturado";
             this.dgvProductoFacturado.Size = new System.Drawing.Size(710, 168);
             this.dgvProductoFacturado.TabIndex = 9;
@@ -231,7 +229,7 @@ namespace El_Unico_Grupo3
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(118, 459);
+            this.label8.Location = new System.Drawing.Point(118, 438);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(146, 19);
             this.label8.TabIndex = 10;
@@ -240,7 +238,7 @@ namespace El_Unico_Grupo3
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(118, 665);
+            this.label9.Location = new System.Drawing.Point(118, 631);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(60, 19);
             this.label9.TabIndex = 11;
@@ -250,7 +248,7 @@ namespace El_Unico_Grupo3
             // txtTotal
             // 
             this.txtTotal.AutoSize = true;
-            this.txtTotal.Location = new System.Drawing.Point(180, 665);
+            this.txtTotal.Location = new System.Drawing.Point(180, 631);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(37, 19);
             this.txtTotal.TabIndex = 12;
@@ -261,7 +259,7 @@ namespace El_Unico_Grupo3
             this.btnCobrar.BackColor = System.Drawing.Color.Green;
             this.btnCobrar.FlatAppearance.BorderSize = 0;
             this.btnCobrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCobrar.Location = new System.Drawing.Point(145, 705);
+            this.btnCobrar.Location = new System.Drawing.Point(145, 658);
             this.btnCobrar.Name = "btnCobrar";
             this.btnCobrar.Size = new System.Drawing.Size(98, 48);
             this.btnCobrar.TabIndex = 15;
@@ -275,7 +273,7 @@ namespace El_Unico_Grupo3
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Location = new System.Drawing.Point(377, 705);
+            this.btnCancelar.Location = new System.Drawing.Point(377, 658);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(132, 48);
             this.btnCancelar.TabIndex = 16;
@@ -288,7 +286,7 @@ namespace El_Unico_Grupo3
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(663, 705);
+            this.btnCerrar.Location = new System.Drawing.Point(663, 658);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(132, 48);
             this.btnCerrar.TabIndex = 17;
@@ -301,7 +299,7 @@ namespace El_Unico_Grupo3
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(891, 782);
+            this.ClientSize = new System.Drawing.Size(891, 749);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCobrar);
