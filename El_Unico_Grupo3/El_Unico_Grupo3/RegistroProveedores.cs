@@ -63,27 +63,30 @@ namespace El_Unico_Grupo3
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            Consulta = "Update tab_proveedor SET Nombre_Proveedor='" + txtNombreProveedor.Text + "', Telefono_Proveedor='" + txtTelefonoProveedor.Text + "', Direccion_Proveedor='" + txtDireccionProveedor.Text + "' where Id_Proveedor=" + txtIdProveedor.Text;
-            if (conexionDB.Actualizar(Consulta))
+            if (validarBusqueda())
             {
-                MessageBox.Show("Registro actualizado con exito", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dgvProveedor.DataSource = conexionDB.LlenarGrid("Select * from tab_proveedor");
-                txtIdProveedor.Clear();
-                txtNombreProveedor.Clear();
-                txtTelefonoProveedor.Clear();
-                txtDireccionProveedor.Clear();
-                txtIdProveedorBusqueda.Clear();
-                txtIdProveedor.Focus();
-            }
-            else
-            {
-                MessageBox.Show("No se pudo eliminar el registro", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtIdProveedor.Clear();
-                txtNombreProveedor.Clear();
-                txtTelefonoProveedor.Clear();
-                txtDireccionProveedor.Clear();
-                txtIdProveedorBusqueda.Clear();
-                txtIdProveedor.Focus();
+                Consulta = "Update tab_proveedor SET Nombre_Proveedor='" + txtNombreProveedor.Text + "', Telefono_Proveedor='" + txtTelefonoProveedor.Text + "', Direccion_Proveedor='" + txtDireccionProveedor.Text + "' where Id_Proveedor=" + txtIdProveedor.Text;
+                if (conexionDB.Actualizar(Consulta))
+                {
+                    MessageBox.Show("Registro actualizado con exito", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgvProveedor.DataSource = conexionDB.LlenarGrid("Select * from tab_proveedor");
+                    txtIdProveedor.Clear();
+                    txtNombreProveedor.Clear();
+                    txtTelefonoProveedor.Clear();
+                    txtDireccionProveedor.Clear();
+                    txtIdProveedorBusqueda.Clear();
+                    txtIdProveedor.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo eliminar el registro", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtIdProveedor.Clear();
+                    txtNombreProveedor.Clear();
+                    txtTelefonoProveedor.Clear();
+                    txtDireccionProveedor.Clear();
+                    txtIdProveedorBusqueda.Clear();
+                    txtIdProveedor.Focus();
+                }
             }
         }
 
@@ -128,12 +131,13 @@ namespace El_Unico_Grupo3
                 txtNombreProveedor.Text = Convert.ToString(dgvProveedor.CurrentRow.Cells[1].Value);
                 txtTelefonoProveedor.Text = Convert.ToString(dgvProveedor.CurrentRow.Cells[2].Value);
                 txtDireccionProveedor.Text = Convert.ToString(dgvProveedor.CurrentRow.Cells[3].Value);
+                lblCapturaTipoUsuario.Text = CapturarTipoUsuario;
+                if (lblCapturaTipoUsuario.Text == "Administrador")
+                {
+                    btnElimar.Visible = true;
+                }
             }
-            lblCapturaTipoUsuario.Text = CapturarTipoUsuario;
-            if (lblCapturaTipoUsuario.Text == "Administrador")
-            {
-                btnElimar.Visible = true;
-            }
+            
         }
         private bool validarBusqueda()
         {
