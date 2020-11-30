@@ -26,5 +26,10 @@ namespace El_Unico_Grupo3
         {
 
         }
+
+        private void dGVListadoProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

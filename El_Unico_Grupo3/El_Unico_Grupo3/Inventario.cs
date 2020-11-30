@@ -74,30 +74,13 @@ namespace El_Unico_Grupo3
         }
 
         //Llena segundo conbobox de precio Inventario
-       // solucionar problemas
-        public void LlenarListaDependiente(String id)
-        {
-            frmInventario inv = new frmInventario();
-            MySqlCommand cmd = new MySqlCommand("Select Id_Inventario, PrecioVentaUnitario_Inventario  from Tab_Inventario where FK_Producto_Inventario = @id;", conexion);
-            cmd.Parameters.AddWithValue("Id_inventario", id);
-            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            DataRow dr = dt.NewRow();
-            dr["PrecioVentaUnitario_Inventario"] = "Selecciona el monto";
-            dt.Rows.Add(dr, 0);
-            cbbPrecio.ValueMember = "Id_Inventario";
-            cbbPrecio.DisplayMember = "PrecioVentaUnitario_Inventario";
-            cbbPrecio.DataSource = dt;
-
-        }
+      
+       
 
         private void ccbProductoInventario_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string id = ccbProductoInventario.ValueMember = "Id_Producto";
-            cbbPrecio.DataSource = conexionDB.BuscarPorID("Select PrecioVentaUnitario_Inventario  from Tab_Inventario where FK_Producto_Inventario ={0} ;",id );
-            cbbPrecio.DisplayMember = "PrecioVentaUnitario_Inventario";
-            cbbPrecio.ValueMember = "Id_Inventario";
+            
+           // cbbPrecio.DataSource = conexionDB.BuscarPorID("Select PrecioVentaUnitario_Inventario  from Tab_Inventario where FK_Producto_Inventario = "+ccbProductoInventario.SelectedValue+";");
         }
     }
 }
