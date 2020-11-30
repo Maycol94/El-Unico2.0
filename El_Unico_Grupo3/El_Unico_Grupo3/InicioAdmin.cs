@@ -82,8 +82,6 @@ namespace El_Unico_Grupo3
         }
         public void AbrirFormulario(Form Hijo)
         {
-            if (this.pnContenedor.Controls.Count > 0)
-                this.pnContenedor.Controls.RemoveAt(0);
             Hijo.TopLevel = false;
             pnContenedor.Controls.Add(Hijo);
             Hijo.Dock = DockStyle.Fill;
@@ -117,11 +115,11 @@ namespace El_Unico_Grupo3
             AbrirFormulario(proveedor);
         }
 
+       
+
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            InterfazPedidos pedidos = new InterfazPedidos();
-            pedidos.CapturarTipoUsuario = lblTipoUsuarioCapturado.Text;
-            AbrirFormulario(pedidos);
+            AbrirFormEnPanel(new InterfazPedidos());
         }
 
         private void pnContenedor_Paint(object sender, PaintEventArgs e)
@@ -129,23 +127,16 @@ namespace El_Unico_Grupo3
 
         }
 
+       
+
         private void btnInventatio_Click(object sender, EventArgs e)
         {
             AbrirFormEnPanel(new frmInventario());
         }
 
-        private void btnPedidos_Click_1(object sender, EventArgs e)
+        private void btnExistencia_Click(object sender, EventArgs e)
         {
-            InterfazPedidos pedidos = new InterfazPedidos();
-            pedidos.CapturarTipoUsuario = lblTipoUsuarioCapturado.Text;
-            AbrirFormulario(pedidos);
-        }
-
-        private void btnProveedor_Click_1(object sender, EventArgs e)
-        {
-            RegistroProveedores proveedor = new RegistroProveedores();
-            proveedor.CapturarTipoUsuario = lblTipoUsuarioCapturado.Text;
-            AbrirFormulario(proveedor);
+            AbrirFormEnPanel(new Existencia());
         }
     }
 }
