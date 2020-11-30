@@ -115,12 +115,7 @@ namespace El_Unico_Grupo3
             AbrirFormulario(proveedor);
         }
 
-        private void btnPedidos_Click(object sender, EventArgs e)
-        {
-            InterfazPedidos pedidos = new InterfazPedidos();
-            pedidos.CapturarTipoUsuario = lblTipoUsuarioCapturado.Text;
-            AbrirFormulario(pedidos);
-        }
+       
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
@@ -132,14 +127,16 @@ namespace El_Unico_Grupo3
 
         }
 
-        private void btnProveedor_Click(object sender, EventArgs e)
-        {
-            AbrirFormEnPanel(new RegistroProveedores());
-        }
+       
 
         private void btnInventatio_Click(object sender, EventArgs e)
         {
             AbrirFormEnPanel(new frmInventario());
+        }
+
+        private void btnExistencia_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new Existencia());
         }
     }
 }
