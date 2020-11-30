@@ -51,5 +51,10 @@ namespace El_Unico_Grupo3
             //cbxProducto.ValueMember = "Id_Producto";
             //cbxProducto.DisplayMember = "CostoUnitario_Producto";
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

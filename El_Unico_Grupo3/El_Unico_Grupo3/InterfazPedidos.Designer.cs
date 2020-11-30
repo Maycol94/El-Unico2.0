@@ -44,6 +44,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.dTPFechaPedido = new System.Windows.Forms.DateTimePicker();
             this.cbxProveedor = new System.Windows.Forms.ComboBox();
             this.cbxProducto = new System.Windows.Forms.ComboBox();
@@ -55,6 +56,12 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.txtIdProducto = new System.Windows.Forms.TextBox();
             this.txtIdProveedor = new System.Windows.Forms.TextBox();
+=======
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+>>>>>>> e4aeadae840e0abd183ebd73f1bd9b204b972d09
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVListadoProductos)).BeginInit();
             this.SuspendLayout();
@@ -125,7 +132,16 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Proveedor";
             // 
+<<<<<<< HEAD
             // txtIdPedido
+=======
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(111, 73);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 6;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+>>>>>>> e4aeadae840e0abd183ebd73f1bd9b204b972d09
             // 
             this.txtIdPedido.Enabled = false;
             this.txtIdPedido.Location = new System.Drawing.Point(161, 74);
@@ -220,12 +236,36 @@
             this.button3.Text = "Salir";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // dTPFechaPedido
+            // Column1
             // 
+            this.Column1.HeaderText = "IdProducto";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 101;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "nombre de Producto";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 148;
+            // 
+            // Column3
+            // 
+<<<<<<< HEAD
             this.dTPFechaPedido.Location = new System.Drawing.Point(161, 139);
             this.dTPFechaPedido.Name = "dTPFechaPedido";
             this.dTPFechaPedido.Size = new System.Drawing.Size(200, 20);
             this.dTPFechaPedido.TabIndex = 17;
+=======
+            this.Column3.HeaderText = "PrecioProdcuto";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 128;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "CantidadProducto";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 150;
+>>>>>>> e4aeadae840e0abd183ebd73f1bd9b204b972d09
             // 
             // cbxProveedor
             // 
