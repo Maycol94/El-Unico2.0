@@ -26,7 +26,6 @@ namespace El_Unico_Grupo3
 
         private void RegistroProveedores_Load(object sender, EventArgs e)
         {
-            
             dgvProveedor.DataSource = conexionDB.LlenarGrid("Select * from tab_proveedor");
         }
 

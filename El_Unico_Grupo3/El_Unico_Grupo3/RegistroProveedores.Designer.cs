@@ -32,14 +32,11 @@ namespace El_Unico_Grupo3
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnElimar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnBuscarPorID = new System.Windows.Forms.Button();
-            this.dgvProveedor = new System.Windows.Forms.DataGridView();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.txtDireccionProveedor = new System.Windows.Forms.TextBox();
             this.txtTelefonoProveedor = new System.Windows.Forms.TextBox();
@@ -53,8 +50,9 @@ namespace El_Unico_Grupo3
             this.lblProveedor = new System.Windows.Forms.Label();
             this.lblCapturaTipoUsuario = new System.Windows.Forms.Label();
             this.errorIcone = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProveedor)).BeginInit();
+            this.dgvProveedor = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProveedor)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -73,7 +71,7 @@ namespace El_Unico_Grupo3
             this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnCerrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(501, 336);
+            this.btnCerrar.Location = new System.Drawing.Point(543, 336);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(117, 53);
             this.btnCerrar.TabIndex = 27;
@@ -87,7 +85,7 @@ namespace El_Unico_Grupo3
             this.btnElimar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnElimar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnElimar.ForeColor = System.Drawing.Color.White;
-            this.btnElimar.Location = new System.Drawing.Point(501, 142);
+            this.btnElimar.Location = new System.Drawing.Point(543, 142);
             this.btnElimar.Name = "btnElimar";
             this.btnElimar.Size = new System.Drawing.Size(119, 40);
             this.btnElimar.TabIndex = 26;
@@ -102,7 +100,7 @@ namespace El_Unico_Grupo3
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(501, 96);
+            this.btnActualizar.Location = new System.Drawing.Point(543, 96);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(117, 40);
             this.btnActualizar.TabIndex = 25;
@@ -116,7 +114,7 @@ namespace El_Unico_Grupo3
             this.btnBuscarPorID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarPorID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarPorID.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarPorID.Location = new System.Drawing.Point(501, 276);
+            this.btnBuscarPorID.Location = new System.Drawing.Point(543, 276);
             this.btnBuscarPorID.Name = "btnBuscarPorID";
             this.btnBuscarPorID.Size = new System.Drawing.Size(117, 53);
             this.btnBuscarPorID.TabIndex = 24;
@@ -124,59 +122,13 @@ namespace El_Unico_Grupo3
             this.btnBuscarPorID.UseVisualStyleBackColor = false;
             this.btnBuscarPorID.Click += new System.EventHandler(this.btnBuscarPorID_Click);
             // 
-            // dgvProveedor
-            // 
-            this.dgvProveedor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvProveedor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.dgvProveedor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvProveedor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvProveedor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProveedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvProveedor.ColumnHeadersHeight = 30;
-            this.dgvProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProveedor.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvProveedor.EnableHeadersVisualStyles = false;
-            this.dgvProveedor.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvProveedor.Location = new System.Drawing.Point(14, 221);
-            this.dgvProveedor.Name = "dgvProveedor";
-            this.dgvProveedor.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProveedor.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvProveedor.RowHeadersVisible = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            this.dgvProveedor.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvProveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProveedor.Size = new System.Drawing.Size(479, 155);
-            this.dgvProveedor.TabIndex = 23;
-            // 
             // btnRegistrar
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(501, 50);
+            this.btnRegistrar.Location = new System.Drawing.Point(543, 50);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(117, 40);
             this.btnRegistrar.TabIndex = 22;
@@ -231,7 +183,7 @@ namespace El_Unico_Grupo3
             // 
             this.txtIdProveedorBusqueda.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdProveedorBusqueda.ForeColor = System.Drawing.Color.DimGray;
-            this.txtIdProveedorBusqueda.Location = new System.Drawing.Point(499, 243);
+            this.txtIdProveedorBusqueda.Location = new System.Drawing.Point(541, 243);
             this.txtIdProveedorBusqueda.Name = "txtIdProveedorBusqueda";
             this.txtIdProveedorBusqueda.Size = new System.Drawing.Size(121, 27);
             this.txtIdProveedorBusqueda.TabIndex = 14;
@@ -271,7 +223,7 @@ namespace El_Unico_Grupo3
             this.lblIdBusquedaProveedor.AutoSize = true;
             this.lblIdBusquedaProveedor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdBusquedaProveedor.ForeColor = System.Drawing.Color.White;
-            this.lblIdBusquedaProveedor.Location = new System.Drawing.Point(497, 221);
+            this.lblIdBusquedaProveedor.Location = new System.Drawing.Point(539, 221);
             this.lblIdBusquedaProveedor.Name = "lblIdBusquedaProveedor";
             this.lblIdBusquedaProveedor.Size = new System.Drawing.Size(107, 19);
             this.lblIdBusquedaProveedor.TabIndex = 18;
@@ -302,18 +254,49 @@ namespace El_Unico_Grupo3
             // 
             this.errorIcone.ContainerControl = this;
             // 
+            // dgvProveedor
+            // 
+            this.dgvProveedor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvProveedor.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvProveedor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.dgvProveedor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvProveedor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProveedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProveedor.EnableHeadersVisualStyles = false;
+            this.dgvProveedor.Location = new System.Drawing.Point(14, 221);
+            this.dgvProveedor.Margin = new System.Windows.Forms.Padding(5);
+            this.dgvProveedor.Name = "dgvProveedor";
+            this.dgvProveedor.RowHeadersVisible = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvProveedor.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvProveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvProveedor.Size = new System.Drawing.Size(521, 182);
+            this.dgvProveedor.TabIndex = 29;
+            // 
             // RegistroProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(636, 418);
+            this.ClientSize = new System.Drawing.Size(670, 418);
+            this.Controls.Add(this.dgvProveedor);
             this.Controls.Add(this.lblCapturaTipoUsuario);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnElimar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnBuscarPorID);
-            this.Controls.Add(this.dgvProveedor);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.txtDireccionProveedor);
             this.Controls.Add(this.txtTelefonoProveedor);
@@ -331,8 +314,8 @@ namespace El_Unico_Grupo3
             this.Name = "RegistroProveedores";
             this.Text = "RegistroProveedores";
             this.Load += new System.EventHandler(this.RegistroProveedores_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProveedor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcone)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProveedor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -345,7 +328,6 @@ namespace El_Unico_Grupo3
         private System.Windows.Forms.Button btnElimar;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnBuscarPorID;
-        private System.Windows.Forms.DataGridView dgvProveedor;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.TextBox txtDireccionProveedor;
         private System.Windows.Forms.TextBox txtTelefonoProveedor;
@@ -359,5 +341,6 @@ namespace El_Unico_Grupo3
         private System.Windows.Forms.Label lblProveedor;
         private System.Windows.Forms.Label lblCapturaTipoUsuario;
         private System.Windows.Forms.ErrorProvider errorIcone;
+        private System.Windows.Forms.DataGridView dgvProveedor;
     }
 }

@@ -10,7 +10,7 @@ namespace El_Unico_Grupo3
 {
     class ConexionDataBase
     {
-        MySqlConnection conexion = new MySqlConnection("datasource=127.0.0.1;port=3306;username=root;password=root;database=el_unico;Sslmode = none;");
+        MySqlConnection conexion = new MySqlConnection("datasource=127.0.0.1;port=3306;username=root;password=umanzor;database=el_unico;Sslmode = none;");
         private MySqlCommand cmd;
         private MySqlDataReader verificar;
       //  private MySqlCommandBuilder cmBuilder;
@@ -163,25 +163,39 @@ namespace El_Unico_Grupo3
             conexion.Close();
             return encontrado;
         }
-        //Yanar conbobox
-      /*  public void LlenarListaDependiente(String id)
+        public string CostoUnitario(string consulta)
         {
-            string sql = "Select Id_Inventario, PrecioVentaUnitario_Inventario  from Tab_Inventario where FK_Producto_Inventario = @id;"
-            frmInventario inv = new frmInventario();
-            MySqlCommand cmd = new MySqlCommand(sql,conexion);
-            cmd.Parameters.AddWithValue("Id_inventario", id);
-            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            DataRow dr = dt.NewRow();
-            dr["PrecioVentaUnitario_Inventario"] = "Selecciona el monto";
-            dt.Rows.Add(dr, 0);
-            cbbPrecio.ValueMember = "Id_Inventario";
-            cbbPrecio.DisplayMember = "PrecioVentaUnitario_Inventario";
-            cbbPrecio.DataSource = dt;
+            conexion.Open();
+            cmd = new MySqlCommand(consulta, conexion);
+            verificar = cmd.ExecuteReader();
+            string encontrado = "";
+
+            if (verificar.Read())
+            {
+                encontrado = Convert.ToString(verificar["CostoUnitario_Producto"]);
+            }
+            conexion.Close();
+            return encontrado;
+        }
+        //Yanar conbobox
+        /*  public void LlenarListaDependiente(String id)
+          {
+              string sql = "Select Id_Inventario, PrecioVentaUnitario_Inventario  from Tab_Inventario where FK_Producto_Inventario = @id;"
+              frmInventario inv = new frmInventario();
+              MySqlCommand cmd = new MySqlCommand(sql,conexion);
+              cmd.Parameters.AddWithValue("Id_inventario", id);
+              MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+              DataTable dt = new DataTable();
+              da.Fill(dt);
+              DataRow dr = dt.NewRow();
+              dr["PrecioVentaUnitario_Inventario"] = "Selecciona el monto";
+              dt.Rows.Add(dr, 0);
+              cbbPrecio.ValueMember = "Id_Inventario";
+              cbbPrecio.DisplayMember = "PrecioVentaUnitario_Inventario";
+              cbbPrecio.DataSource = dt;
 
 
-        }*/
+          }*/
 
 
     }

@@ -36,8 +36,8 @@ namespace El_Unico_Grupo3
             System.Windows.Forms.Button btnFactura;
             System.Windows.Forms.Button btnProductos;
             System.Windows.Forms.Button btnUsuarios;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicioAdmin));
             System.Windows.Forms.Button btnInventatio;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicioAdmin));
             this.pnTitulo = new System.Windows.Forms.Panel();
             this.lblTipoUsuarioCapturado = new System.Windows.Forms.Label();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
@@ -46,6 +46,7 @@ namespace El_Unico_Grupo3
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.pnContenedor = new System.Windows.Forms.Panel();
             this.pnVertical = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -54,7 +55,6 @@ namespace El_Unico_Grupo3
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel8 = new System.Windows.Forms.Panel();
             btnCerrarAdmin = new System.Windows.Forms.Button();
             btnClientes = new System.Windows.Forms.Button();
             btnPedidos = new System.Windows.Forms.Button();
@@ -127,7 +127,7 @@ namespace El_Unico_Grupo3
             btnPedidos.Text = "Pedidos";
             btnPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             btnPedidos.UseVisualStyleBackColor = false;
-            btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
+            btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click_1);
             // 
             // btnProveedor
             // 
@@ -146,7 +146,7 @@ namespace El_Unico_Grupo3
             btnProveedor.Text = "Proveedor";
             btnProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             btnProveedor.UseVisualStyleBackColor = false;
-            btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
+            btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click_1);
             // 
             // btnFactura
             // 
@@ -204,6 +204,25 @@ namespace El_Unico_Grupo3
             btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             btnUsuarios.UseVisualStyleBackColor = false;
             btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            // 
+            // btnInventatio
+            // 
+            btnInventatio.BackColor = System.Drawing.Color.Maroon;
+            btnInventatio.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnInventatio.FlatAppearance.BorderSize = 0;
+            btnInventatio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            btnInventatio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnInventatio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnInventatio.ForeColor = System.Drawing.Color.White;
+            btnInventatio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnInventatio.Location = new System.Drawing.Point(12, 299);
+            btnInventatio.Name = "btnInventatio";
+            btnInventatio.Size = new System.Drawing.Size(175, 40);
+            btnInventatio.TabIndex = 8;
+            btnInventatio.Text = "Inventario";
+            btnInventatio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnInventatio.UseVisualStyleBackColor = false;
+            btnInventatio.Click += new System.EventHandler(this.btnInventatio_Click);
             // 
             // pnTitulo
             // 
@@ -319,6 +338,14 @@ namespace El_Unico_Grupo3
             this.pnVertical.Size = new System.Drawing.Size(187, 657);
             this.pnVertical.TabIndex = 3;
             // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel8.Location = new System.Drawing.Point(0, 299);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(10, 40);
+            this.panel8.TabIndex = 7;
+            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
@@ -384,33 +411,6 @@ namespace El_Unico_Grupo3
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel8.Location = new System.Drawing.Point(0, 299);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(10, 40);
-            this.panel8.TabIndex = 7;
-            // 
-            // btnInventatio
-            // 
-            btnInventatio.BackColor = System.Drawing.Color.Maroon;
-            btnInventatio.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnInventatio.FlatAppearance.BorderSize = 0;
-            btnInventatio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            btnInventatio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnInventatio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            btnInventatio.ForeColor = System.Drawing.Color.White;
-            btnInventatio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnInventatio.Location = new System.Drawing.Point(12, 299);
-            btnInventatio.Name = "btnInventatio";
-            btnInventatio.Size = new System.Drawing.Size(175, 40);
-            btnInventatio.TabIndex = 8;
-            btnInventatio.Text = "Inventario";
-            btnInventatio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            btnInventatio.UseVisualStyleBackColor = false;
-            btnInventatio.Click += new System.EventHandler(this.btnInventatio_Click);
             // 
             // InicioAdmin
             // 
